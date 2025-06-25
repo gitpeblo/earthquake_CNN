@@ -27,7 +27,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'furo'
 html_static_path = ['_static']
 html_title = "Earthquake CNN Documentation"
-#html_logo = "_static/logo.png"   # If you want a custom logo
+html_logo = "_static/logo.png"   # If you want a custom logo
 html_theme_options = {
     "sidebar_hide_name": False,
 }
