@@ -61,6 +61,7 @@ Each building image pair is therefore uniquely identified by:
 - the shape of the **bay grid**
 
 .. _metadata:
+
 Metadata and Model Features
 ---------------------------
 
