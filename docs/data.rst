@@ -26,12 +26,12 @@ the application of the earthquake, both from the front view:
     <div style="display: flex; justify-content: center; gap: 40px;">
 
       <div style="text-align: center;">
-        <img src="_static/data/example_input_DesignPointA1000.png" width="300px" alt="Input image">
+        <img src="_static/data/example_input_DesignPointA1000.png" width="400px" alt="Input image">
         <p><em>Input (pre-earthquake geometry)</em></p>
       </div>
 
       <div style="text-align: center;">
-        <img src="_static/data/example_output_DesignPointA1000.png" width="300px" alt="Output image">
+        <img src="_static/data/example_output_DesignPointA1000.png" width="400px" alt="Output image">
         <p><em>Output (post-earthquake stress)</em></p>
       </div>
 
@@ -148,20 +148,50 @@ vertical and horizontal edges.
 
    Step 2 — Detect bay grid layout using edge detection.
 
-A template is extracted from the top-left cell, and template matching is used
-to locate all similar cells across the image.
-This step allows us to robustly detect the repeating bay pattern.
+The next steps involve extracting a template from the top-left cell of the
+grid, which serves as a reference for the bay structure.
+First, we identify the intersection points of the detected grid edges.
+
+.. figure:: _static/preprocessing/03_intersection_DesignPointA1000.png.png
+   :width: 400px
+   :align: center
+   :alt: Grid edge intersection detection
+
+   Step 3 — Identify the intersection points between the detected grid edges.
+
+Next, a template is extracted from the top-left bay, using the previously
+identified intersection points.
+
+.. figure:: _static/preprocessing/04_template_DesignPointA1000.png.png
+   :width: 100px
+   :align: center
+   :alt: Template bay extraction
+
+   Step 4 — Extract a template bay region from the top-left corner of the grid.
+
+Template matching is then used to locate all other bay regions that resemble
+the extracted template.
+
+.. figure:: _static/preprocessing/05_matches_DesignPointA1000.png.png
+   :width: 400px
+   :align: center
+   :alt: Template matching result
+
+   Step 5 — Detect all bay regions by matching the template across the image.
 
 From the matched grid, we compute a bounding box that encloses the full bay layout.
-We then draw a structured grid of rectangles aligned with the template dimensions,
-ensuring a consistent segmentation across buildings of different sizes.
 
-.. figure:: _static/preprocessing/step03_structured_grid.png
+.. figure:: _static/preprocessing/06_bbox_DesignPointA1000.png
    :width: 400px
    :align: center
    :alt: Structured grid overlay
 
-   Step 3 — Draw a uniform bay grid aligned to the matched bounding box.
+   Step 6 — Draw a bounding box.
+
+We then draw a structured grid of rectangles aligned with the template dimensions,
+ensuring a consistent segmentation across buildings of different sizes.
+
+
 
 Using this grid layout, we segment the corresponding **post-earthquake output image** into
 individual bay regions. These sub-images represent the localized stress state induced by the simulated earthquake.
