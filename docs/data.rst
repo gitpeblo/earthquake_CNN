@@ -91,8 +91,8 @@ metadata—the predictors.
 Data Preprocessing
 ------------------
 
-Images
-~~~~~~
+Computer Vision (CV) pipeline
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Predicting the full stress map of a building as a single image is a highly
 complex task, due to the high dimensionality of the output and the variability
