@@ -211,13 +211,36 @@ we first  slightly shrunk the grid cells.
 
    Step 8 — Shrink all the cells.
 
-We then extract the content of each cell as a proxy for the actual bay regions.
+--
+
+This grid consitutes a segmentation of the image into individual
+proxy-bay regions, that we can now apply to the post-earthquake images.
 This entails losing some of the information at the edges of the bays,
 but it allows us to focus on the core structural content without the artifacts
 introduced by the grid lines and ticks.
 
-To standardize the data for learning, each bay image is resized to match the
-original template shape via bicubic interpolation.
+For the post-earthquake image shown above, the cropped bays of interest
+extracted from the bottom row appear as shown below:
+
+.. raw:: html
+
+    <div style="display: flex; justify-content: center; gap: 40px;">
+
+      <div style="text-align: center;">
+        <img src="_static/preprocessing/02_crop_R9_C10_r0_c4.png" width="200px" alt="Input image">
+        <p><em>Bottom-right extraction</em></p>
+      </div>
+
+      <div style="text-align: center;">
+        <img src="_static/preprocessing/02_crop_R9_C10_r0_c5.png" width="200px" alt="Output image">
+        <p><em>Bottom-left extraction</em></p>
+      </div>
+
+    </div>
+
+After extraction, each bay image is resized to match the original template
+shape via bicubic interpolation.
+
 This will not yield the exact size of each of the original bays at different
 image locations (as they are a few pixel different from each other), but that
 of the top-left bay from which the template has been cropped.
