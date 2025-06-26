@@ -236,41 +236,61 @@ interest extracted from the bottom row appear as shown below:
     <div style="display: flex; justify-content: center; gap: 40px;">
 
       <div style="text-align: center;">
-        <img src="_static/preprocessing/03_resized_R9_C10_r0_c4.png" width="200px" alt="Input image">
-        <p><em>Bottom-right extraction</em></p>
+        <img src="_static/preprocessing/03_resized_R9_C10_r0_c4.png" width="200px" alt="Bottom-left extraction">
+        <p><em>Bottom-left extraction</em></p>
       </div>
 
       <div style="text-align: center;">
-        <img src="_static/preprocessing/03_resized_R9_C10_r0_c5.png" width="200px" alt="Output image">
-        <p><em>Bottom-left extraction</em></p>
+        <img src="_static/preprocessing/03_resized_R9_C10_r0_c5.png" width="200px" alt="Bottom-right extraction">
+        <p><em>Bottom-right extraction</em></p>
       </div>
 
     </div>
 
-To reduce high-frequency noise (like the grey pixels visible in the images above),
-a Gaussian blur is applied.
+To reduce high-frequency noise such as the grey pixels and the artifact segments
+visible in the images above, a Gaussian blur is applied.
 
 .. raw:: html
 
     <div style="display: flex; justify-content: center; gap: 40px;">
 
       <div style="text-align: center;">
-        <img src="_static/preprocessing/04_smooth_R9_C10_r0_c4.png" width="200px" alt="Input image">
-        <p><em>Bottom-right extraction</em></p>
+        <img src="_static/preprocessing/04_smooth_R9_C10_r0_c4.png" width="200px" alt="Smoothed bottom-left extraction">
+        <p><em>Smoothed bottom-left extraction</em></p>
       </div>
 
       <div style="text-align: center;">
-        <img src="_static/preprocessing/04_smooth_R9_C10_r0_c5.png" width="200px" alt="Output image">
-        <p><em>Bottom-left extraction</em></p>
+        <img src="_static/preprocessing/04_smooth_R9_C10_r0_c5.png" width="200px" alt="Smoothed bottom-right extraction">
+        <p><em>Smoothed bottom-right extraction</em></p>
       </div>
 
     </div>
 
-This is followed by median filtering to restore structural detail.
+This is ultimately followed by a median filtering aimed at restoring structural
+detail.
 
-Finally, any bay images that are predominantly dark (i.e., the ones that are
-not subject of the analysis, such as the first and last 4 columns in the images
-above) are excluded from the dataset.
+.. raw:: html
+
+    <div style="display: flex; justify-content: center; gap: 40px;">
+
+      <div style="text-align: center;">
+        <img src="_static/preprocessing/05_median_R9_C10_r0_c4.png" width="200px" alt="Filtered bottom-left extraction">
+        <p><em>Filtered bottom-left extraction</em></p>
+      </div>
+
+      <div style="text-align: center;">
+        <img src="_static/preprocessing/05_median_R9_C10_r0_c5.png" width="200px" alt="Filtered bottom-right extraction">
+        <p><em>Filtered bottom-right extraction</em></p>
+      </div>
+
+    </div>
+
+
+Any bay image that are predominantly dark, i.e., the ones that are
+not subject of the analysis (such as the first and last 4 columns in the
+pre-earthquake image example above) is excluded from the dataset.
+
+--
 
 The result of this pipeline is a clean, well-aligned dataset of labeled
 bay-level image samples, which can be used to train a deep learning model.
