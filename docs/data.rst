@@ -58,6 +58,21 @@ Each building image pair is therefore uniquely identified by:
 Metadata and Model Features
 ---------------------------
 
++------+--------+-------+--------+------------+--------+-----+----------+
+| ID   | length | width | height | thickness  | PGA    | POV | Hz       |
++======+========+=======+========+============+========+=====+==========+
+| 0001 | 3      | 4     | 3      | 10         | 0.2458 | B   | 5.091223 |
++------+--------+-------+--------+------------+--------+-----+----------+
+| 0002 | 4      | 5     | 3      | 10         | 0.2458 | D   | 4.298888 |
++------+--------+-------+--------+------------+--------+-----+----------+
+| 0003 | 5      | 6     | 3      | 10         | 0.2458 | A   | 5.398558 |
++------+--------+-------+--------+------------+--------+-----+----------+
+| 0004 | 7      | 8     | 3      | 10         | 0.2458 | C   | 4.298326 |
++------+--------+-------+--------+------------+--------+-----+----------+
+| 0005 | 8      | 9     | 3      | 10         | 0.2458 | B   | 3.939938 |
++------+--------+-------+--------+------------+--------+-----+----------+
+
+
 In addition to the images, each building-earthquake pair is associated with a
 set of **metadata** describing the structural and seismic parameters.
 These include:
@@ -65,6 +80,7 @@ These include:
 - **length**, **width**, and **height** of the building (measured in number of bays)
 - **wall thickness** (structural thickness of each bay)
 - **PGA** (*peak ground acceleration*) — a measure of earthquake intensity
+- **POV** — the view direction (from one of the four sides: A, B, C, or D)
 - **Hz** — the dominant frequency of the ground motion
 
 These metadata variables are used as **predictors** (*X*) in the machine
@@ -299,3 +315,4 @@ shot.
 
 Metadata
 ~~~~~~~~
+
