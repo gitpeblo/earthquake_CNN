@@ -79,7 +79,7 @@ the **target variables** (*y*).
 These images provide the ground truth output that the CNN is trained to predict.
 
 In contrast, the **pre-earthquake images** are **not** used as inputs to the
-model, but just included for preprocessing purposes (see below).
+model, but just included for preprocessing purposes  (see :ref:`preprocessing`).
 
 --
 
@@ -87,6 +87,7 @@ In summary, we have images for 3421 buildings, each with 4 views
 (front, back, left, right)—the targets, and the corresponding
 metadata—the predictors.
 
+.. _preprocessing:
 Data Preprocessing
 ------------------
 
@@ -113,29 +114,43 @@ These include:
 - **artifacts** introduced by the earthquake simulator (e.g., white boxes)
 - **inconsistent** bay sizes in pixel dimensions
 
+These elements are removed or reduced during preprocessing: the pipeline is
+specifically designed to filter out such noise and standardize the bay regions.
+This ensures that the model focuses solely on learning the meaningful stress
+patterns, not irrelevant visual distortions.
+
 --
 
-The process begins with each raw input image, where we first isolate the structural content
-by filtering out background pixels and cropping to the bounding region of the building.
+The preprocessing happens via a Computer Vision (CV) pipeline which
+automatically identifies the bays on the simpler pre-earthquake images, then
+applies the same segmentation to the post-earthquake images.
+
+The process begins with each raw input image, where we first isolate the
+structural content by filtering out background pixels and cropping to the
+bounding region of the building.
 This ensures that the analysis focuses exclusively on the meaningful geometry.
 
-.. figure:: _static/preprocessing/step01_filtered_crop.png
+.. figure:: _static/preprocessing/01_grey_DesignPointA1000.png
    :width: 400px
    :align: center
    :alt: Whitish-pixel filter and crop
 
-   Step 1 — Filter out non-structural pixels and crop to the relevant building region.
+   Step 1 — Filter out non-structural pixels and crop to the relevant building
+   region.
 
-Next, we detect the underlying bay grid by identifying the most prominent vertical and horizontal edges.
-A template is extracted from the top-left cell, and template matching is used to locate all similar cells
-across the image. This step allows us to robustly detect the repeating bay pattern.
+Next, we detect the underlying bay grid by identifying the most prominent
+vertical and horizontal edges.
 
-.. figure:: _static/preprocessing/step02_grid_overlay.png
+.. figure:: _static/preprocessing/02_edges_DesignPointA1000.png
    :width: 400px
    :align: center
    :alt: Grid edge detection and matching
 
-   Step 2 — Detect bay grid layout using edge detection and template matching.
+   Step 2 — Detect bay grid layout using edge detection.
+
+A template is extracted from the top-left cell, and template matching is used
+to locate all similar cells across the image.
+This step allows us to robustly detect the repeating bay pattern.
 
 From the matched grid, we compute a bounding box that encloses the full bay layout.
 We then draw a structured grid of rectangles aligned with the template dimensions,
@@ -177,3 +192,6 @@ The result of this pipeline is a clean, well-aligned dataset of labeled bay-leve
 which can be used to train a convolutional neural network to predict localized stress patterns.
 This strategy allows us to frame the problem as a structured, supervised learning task
 without the complexity of generating entire stress maps in one shot.
+
+Metadata
+~~~~~~~~
