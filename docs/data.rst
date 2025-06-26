@@ -12,10 +12,8 @@ These views are captured **both before and after** the simulated earthquake:
 
 The post-quake images use **color-coded bays** to indicate the level of stress — higher stress regions are shown in warmer colors (e.g., red), and lower stress in cooler tones (e.g., blue or green).
 
----
-
-Example Input-Output Pair
--------------------------
+Example pre-/post-Earthquake
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Below is an example of one building’s input and its corresponding output after
 the application of the earthquake, both from the front view:
