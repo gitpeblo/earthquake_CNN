@@ -1,12 +1,9 @@
 Data and Preprocessing
 ======================
 
-Each synthetic building is rendered from **four viewpoints**, corresponding to the cardinal directions around the structure:
-
-- front view
-- back view
-- left view
-- right view
+Each synthetic building is rendered from **four viewpoints**, corresponding to
+the cardinal directions around the structure, i.e., front, back, left and right
+view.
 
 These views are captured **both before and after** the simulated earthquake:
 
