@@ -7,13 +7,19 @@ Images
 Our data **images** consist of a collection of synthetic buildings rendered from
 **four viewpoints**, corresponding to the cardinal directions around the
 structure, i.e., front, back, left, and right view.
+For each building, we therefore have:
+
+- **4 input images** showing the structure from four cardinal directions
+- **4 output images** visualizing the resulting stress after an earthquake, also from the same four directions
 
 These views are captured **both before and after** the simulated earthquake:
 
 - The **pre-quake images** represent the building geometry
 - The **post-quake images** display stress distributions computed via finite element analysis (FEA)
 
-The post-quake images use **color-coded bays** to indicate the level of stress — higher stress regions are shown in warmer colors (e.g., red), and lower stress in cooler tones (e.g., blue or green).
+The post-quake images use **color-coded bays** to indicate the level of
+stress — higher stress regions are shown in warmer colors (e.g., red), and
+lower stress in cooler tones (e.g., blue or green).
 
 Example pre-/post-Earthquake
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,6 +64,7 @@ Each building image pair is therefore uniquely identified by:
 Metadata and Model Features
 ---------------------------
 
+.. _table-metadata:
 +------+--------+-------+--------+------------+--------+-----+----------+
 | ID   | length | width | height | thickness  | PGA    | POV | Hz       |
 +======+========+=======+========+============+========+=====+==========+
@@ -72,7 +79,6 @@ Metadata and Model Features
 | 0005 | 8      | 9     | 3      | 10         | 0.2458 | B   | 3.939938 |
 +------+--------+-------+--------+------------+--------+-----+----------+
 
-
 In addition to the images, each building-earthquake pair is associated with a
 set of **metadata** describing the structural and seismic parameters.
 These include:
@@ -80,7 +86,7 @@ These include:
 - **length**, **width**, and **height** of the building (measured in number of bays)
 - **wall thickness** (structural thickness of each bay)
 - **PGA** (*peak ground acceleration*) — a measure of earthquake intensity
-- **POV** — the view direction (from one of the four sides: A, B, C, or D)
+- **POV** (*point of view*) — the view direction (from one of the four sides: A, B, C, or D)
 - **Hz** — the dominant frequency of the ground motion
 
 These metadata variables are used as **predictors** (*X*) in the machine
@@ -316,3 +322,24 @@ shot.
 Metadata
 ~~~~~~~~
 
+The metadata introduced in :ref:`_metadata-metadata-example` are assembled from
+Table :ref:`table-metadata` 
+
+
+the machine learning model, with one exception: the `POV` (point of view)
+column is one-hot encoded into 3 new columns (`POV_D` is omitted to avoid
+artificial correlations).
+
++------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
+| ID   | length | width | height | thickness  | PGA    | POV_A  | POV_B  | POV_C  | Hz       |
++======+========+=======+========+============+========+========+========+========+==========+
+| 0001 | 3      | 4     | 3      | 10         | 0.2458 | 0      | 1      | 0      | 5.091223 |
++------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
+| 0002 | 4      | 5     | 3      | 10         | 0.2458 | 0      | 0      | 0      | 4.298888 |
++------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
+| 0003 | 5      | 6     | 3      | 10         | 0.2458 | 1      | 0      | 0      | 5.398558 |
++------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
+| 0004 | 7      | 8     | 3      | 10         | 0.2458 | 0      | 0      | 1      | 4.298326 |
++------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
+| 0005 | 8      | 9     | 3      | 10         | 0.2458 | 0      | 1      | 0      | 3.939938 |
++------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
