@@ -150,14 +150,14 @@ vertical and horizontal edges.
 
 The next steps involve extracting a template from the top-left cell of the
 grid, which serves as a reference for the bay structure.
-First, we identify the intersection points of the detected grid edges.
+First, we identify the upper-left intersection points of the detected grid edges.
 
 .. figure:: _static/preprocessing/03_intersection_DesignPointA1000.png
    :width: 400px
    :align: center
    :alt: Grid edge intersection detection
 
-   Step 3 — Identify the intersection points between the detected grid edges.
+   Step 3 — Identify the upper-left intersection points between the detected grid edges.
 
 Next, a template is extracted from the top-left bay, using the previously
 identified intersection points.
@@ -184,44 +184,58 @@ From the matched grid, we compute a bounding box that encloses the full bay layo
 .. figure:: _static/preprocessing/06_bbox_DesignPointA1000.png
    :width: 400px
    :align: center
-   :alt: Structured grid overlay
+   :alt: Bounding box
 
    Step 6 — Draw a bounding box.
 
-We then draw a structured grid of rectangles aligned with the template dimensions,
-ensuring a consistent segmentation across buildings of different sizes.
+We then draw a structured grid of rectangles, each with dimentions equal to
+those of the template.
+This ensures a consistent segmentation into cells of equal size.
+Hower, the cell grid is only an approximation of the actual bay layout, since
+the bays may not be perfectly aligned or may vary slightly in size.
 
-
-
-Using this grid layout, we segment the corresponding **post-earthquake output image** into
-individual bay regions. These sub-images represent the localized stress state induced by the simulated earthquake.
-
-.. figure:: _static/preprocessing/step04_output_crops.png
+.. figure:: _static/preprocessing/07_grid_DesignPointA1000.png
    :width: 400px
    :align: center
-   :alt: Cropped output bay regions
+   :alt: Cell grid
 
-   Step 4 — Crop matching bay regions from the post-earthquake image.
+   Step 7 — Draw a uniform grid.
 
-To standardize the data for learning, each bay image is resized to match the original template shape.
-A Gaussian blur is applied to reduce high-frequency noise (like grid lines), followed by median filtering
-to restore structural detail.
+To capture the actual content of the bays, and avoid the grid lines and ticks,
+we first  slightly shrunk the grid cells.
 
-.. figure:: _static/preprocessing/step05_smoothed_filtered.png
+.. figure:: _static/preprocessing/08_shrunk_grid_DesignPointA1000.png
    :width: 400px
    :align: center
-   :alt: Smoothed and median-filtered bay images
+   :alt: Structured grid overlay
 
-   Step 5 — Resize and filter the bay-level images for uniformity and clarity.
+   Step 8 — Shrink all the cells.
 
-Finally, any bay images that are predominantly dark (e.g., due to image artifacts or occlusion)
-are excluded from the dataset. The remaining valid samples are saved using a filename
-that encodes the bay’s position and the overall building layout (e.g., number of rows/columns, row and column index).
+We then extract the content of each cell as a proxy for the actual bay regions.
+This entails losing some of the information at the edges of the bays,
+but it allows us to focus on the core structural content without the artifacts
+introduced by the grid lines and ticks.
 
-The result of this pipeline is a clean, well-aligned dataset of labeled bay-level image samples,
-which can be used to train a convolutional neural network to predict localized stress patterns.
-This strategy allows us to frame the problem as a structured, supervised learning task
-without the complexity of generating entire stress maps in one shot.
+To standardize the data for learning, each bay image is resized to match the
+original template shape via bicubic interpolation.
+This will not yield the exact size of each of the original bays at different
+image locations (as they are a few pixel different from each other), but that
+of the top-left bay from which the template has been cropped.
+However, for the purposes of our model, this caveat is acceptable, as it
+ensures uniformity across the dataset.
+
+Additionally, a Gaussian blur is applied to reduce high-frequency noise
+(like grid lines), followed by median filtering to restore structural detail.
+
+Finally, any bay images that are predominantly dark (i.e., the ones that are
+not subject of the analysis, such as the first and last 4 columns in the images
+above) are excluded from the dataset.
+
+The result of this pipeline is a clean, well-aligned dataset of labeled
+bay-level image samples, which can be used to train a deep learning model.
+This strategy allows us to frame the problem as a structured, supervised
+learning task without the complexity of generating entire stress maps in one
+shot.
 
 Metadata
 ~~~~~~~~
