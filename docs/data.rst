@@ -359,10 +359,8 @@ Data Summary
 After preprocessing and metadata integration, the dataset is organized into
 two components:
 
-- `X`: the input feature matrix, including geometric and seismic metadata along
-   with one-hot encoded orientation.
-- `y`: the target data, consisting of images representing stress distributions
-   for individual bays.
+- `X`: the input feature matrix, including geometric and seismic metadata along with one-hot encoded orientation.
+- `y`: the target data, consisting of images representing stress distributions for individual bays.
 
 Starting from 3,421 buildings, each captured from four different viewpoints,
 we process a total of approximately 14,000 images.
