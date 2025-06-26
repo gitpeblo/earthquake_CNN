@@ -33,3 +33,19 @@ The stress levels are visualized by **color-coding each bay**, allowing for
 quick interpretation of high-stress regions. This synthetic dataset is used to
 explore machine learning models that can predict post-earthquake stress
 distributions based on pre-earthquake geometry and loading.
+
+Objective
+---------
+
+The primary objective of this project is to develop a **convolutional neural network (CNN)** model
+capable of predicting the stress experienced by each bay in the building
+following an earthquake.
+The model takes as input the building’s structural characteristics—such as its
+geometry and bay layout—along with the seismic input parameters, including the
+earthquake's peak ground acceleration (PGA) and frequency.
+
+By learning from the synthetic dataset generated through FEA simulations, the
+CNN aims to estimate the resulting stress distribution across the building bays
+with high spatial resolution.
+This approach can potentially enable real-time assessment of structural vulnerability
+without the need for computationally expensive simulations.
