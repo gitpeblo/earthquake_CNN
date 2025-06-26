@@ -4,9 +4,9 @@ Data and Preprocessing
 Images
 ------
 
-Our data **images** consist of a collection of synthetic buildings rendered from
-**four viewpoints**, corresponding to the cardinal directions around the
-structure, i.e., front, back, left, and right view.
+Our data **images** consist of a collection of 3,421 synthetic buildings
+rendered from **four viewpoints**, corresponding to the cardinal directions
+around the structure, i.e., front, back, left, and right view.
 For each building, we therefore have:
 
 - **4 input images** showing the structure from four cardinal directions
@@ -62,8 +62,8 @@ Each building image pair is therefore uniquely identified by:
 
 .. _metadata:
 
-Metadata and Model Features
----------------------------
+Metadata
+--------
 
 .. _table-metadata:
 +------+--------+-------+--------+------------+--------+-----+----------+
@@ -90,7 +90,10 @@ These include:
 - **POV** (*point of view*) — the view direction (from one of the four sides: A, B, C, or D)
 - **Hz** — the dominant frequency of the ground motion
 
-These metadata variables are used as **predictors** (*X*) in the machine
+Model Features
+--------------
+
+The metadata variables are used as **predictors** (**X**) in the machine
 learning model, providing critical context about both the building's geometry
 and the seismic input.
 They enable the CNN to learn how different structural configurations and
@@ -98,17 +101,11 @@ earthquake characteristics affect the resulting stress distribution.
 
 While the metadata serve as the input features for the predictive model,
 the **post-earthquake images**—which show the stress distribution—constitute
-the **target variables** (*y*).
+the **target variables** (**y**).
 These images provide the ground truth output that the CNN is trained to predict.
 
 In contrast, the **pre-earthquake images** are **not** used as inputs to the
 model, but just included for preprocessing purposes  (see :ref:`preprocessing`).
-
---
-
-In summary, we have images for 3,421 buildings, each with 4 views
-(front, back, left, right)—the targets, and the corresponding
-metadata—the predictors.
 
 .. _preprocessing:
 Data Preprocessing
