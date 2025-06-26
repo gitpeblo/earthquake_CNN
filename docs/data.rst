@@ -236,13 +236,13 @@ interest extracted from the bottom row appear as shown below:
     <div style="display: flex; justify-content: center; gap: 40px;">
 
       <div style="text-align: center;">
-        <img src="_static/preprocessing/03_resized_R9_C10_r0_c4.png" width="200px" alt="Bottom-left extraction">
-        <p><em>Bottom-left extraction</em></p>
+        <img src="_static/preprocessing/03_resized_R9_C10_r0_c4.png" width="200px" alt="Extraction of the bottom-left bay">
+        <p><em>Extraction of the bottom-left bay</em></p>
       </div>
 
       <div style="text-align: center;">
-        <img src="_static/preprocessing/03_resized_R9_C10_r0_c5.png" width="200px" alt="Bottom-right extraction">
-        <p><em>Bottom-right extraction</em></p>
+        <img src="_static/preprocessing/03_resized_R9_C10_r0_c5.png" width="200px" alt="Extraction of the bottom-right bay">
+        <p><em>Extraction of the bottom-right bay</em></p>
       </div>
 
     </div>
@@ -286,9 +286,8 @@ detail.
     </div>
 
 
-Any bay image that are predominantly dark, i.e., the ones that are
-not subject of the analysis (such as the first and last 4 columns in the
-pre-earthquake image example above) is excluded from the dataset.
+Finally, the dark bays—not used in the analysis (such as the first and last 4
+columns in the pre-earthquake image example above)—are excluded from the dataset.
 
 --
 
