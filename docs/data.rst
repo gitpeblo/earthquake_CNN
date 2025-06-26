@@ -105,7 +105,7 @@ model, but just included for preprocessing purposes  (see :ref:`preprocessing`).
 
 --
 
-In summary, we have images for 3421 buildings, each with 4 views
+In summary, we have images for 3,421 buildings, each with 4 views
 (front, back, left, right)—the targets, and the corresponding
 metadata—the predictors.
 
@@ -320,26 +320,61 @@ learning task without the complexity of generating entire stress maps in one
 shot.
 
 Metadata
-~~~~~~~~
+~~~~~~~~~
 
-The metadata introduced in :ref:`_metadata-metadata-example` are assembled from
-Table :ref:`table-metadata` 
+The predicting variabels are assembled from the metadata introduced in
+:ref:`_metadata` with two minor preprocessing steps. 
 
+First, the **POV** feature is converted from a categorical variable to a
+numerical format using **one-hot encoding** (**OHE**), resulting in three new
+binary columns: POV_A, POV_B, and POV_C.
+The POV_D category is intentionally omitted to serve as the reference class
+and to avoid introducing artificial correlations in the data.
 
-the machine learning model, with one exception: the `POV` (point of view)
-column is one-hot encoded into 3 new columns (`POV_D` is omitted to avoid
-artificial correlations).
+Secondly, since we are considering the images per-bay, we add two extra columns,
+**r** and **c**, indicating the row and column indices of each bay within the
+building grid, allowing the model to learn spatial relationships between
+adjacent bays.
 
-+------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
-| ID   | length | width | height | thickness  | PGA    | POV_A  | POV_B  | POV_C  | Hz       |
-+======+========+=======+========+============+========+========+========+========+==========+
-| 0001 | 3      | 4     | 3      | 10         | 0.2458 | 0      | 1      | 0      | 5.091223 |
-+------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
-| 0002 | 4      | 5     | 3      | 10         | 0.2458 | 0      | 0      | 0      | 4.298888 |
-+------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
-| 0003 | 5      | 6     | 3      | 10         | 0.2458 | 1      | 0      | 0      | 5.398558 |
-+------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
-| 0004 | 7      | 8     | 3      | 10         | 0.2458 | 0      | 0      | 1      | 4.298326 |
-+------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
-| 0005 | 8      | 9     | 3      | 10         | 0.2458 | 0      | 1      | 0      | 3.939938 |
-+------+--------+-------+--------+------------+--------+--------+--------+--------+----------+
+The resulting metadata table, which serves as the input features for the
+machine learning model, appears as follows:
+
++--------------------+--------+-------+--------+------------+-----+-----+--------+--------+--------+--------+----------+
+| image              | length | width | height | thickness  | r   | c   | PGA    | POV_A  | POV_B  | POV_C  | Hz       |
++====================+========+=======+========+============+=====+=====+========+========+========+========+==========+
+| building_1_A_bay_1 | 3      | 4     | 3      | 10         | 1   | 2   | 0.2458 | 1      | 0      | 0      | 5.091223 |
++--------------------+--------+-------+--------+------------+-----+-----+--------+--------+--------+--------+----------+
+| building_1_A_bay_2 | 3      | 4     | 3      | 10         | 0   | 2   | 0.2458 | 1      | 0      | 0      | 5.091223 |
++--------------------+--------+-------+--------+------------+-----+-----+--------+--------+--------+--------+----------+
+| building_1_D_bay_1 | 3      | 4     | 3      | 10         | 2   | 2   | 0.2458 | 0      | 0      | 0      | 5.091223 |
++--------------------+--------+-------+--------+------------+-----+-----+--------+--------+--------+--------+----------+
+| building_5_A_bay_1 | 4      | 5     | 3      | 10         | 1   | 2   | 0.2458 | 1      | 0      | 0      | 4.298888 |
++--------------------+--------+-------+--------+------------+-----+-----+--------+--------+--------+--------+----------+
+| building_5_B_bay_1 | 4      | 5     | 3      | 10         | 0   | 2   | 0.2458 | 0      | 1      | 0      | 4.298888 |
++--------------------+--------+-------+--------+------------+-----+-----+--------+--------+--------+--------+----------+
+
+Data Summary
+------------
+
+After preprocessing and metadata integration, the dataset is organized into
+two components:
+
+- `X`: the input feature matrix, including geometric and seismic metadata along
+   with one-hot encoded orientation.
+- `y`: the target data, consisting of images representing stress distributions
+   for individual bays.
+
+Starting from 3,421 buildings, each captured from four different viewpoints,
+we process a total of approximately 14,000 images.
+From these, the pipeline extracts roughly **35,000 individual bay regions**,
+which serve as the model samples.
+
+The following table summarizes the shapes of the input **X** and targets **y**:
+
++-------+-------------------------------+--------------------+
+| Name  | Shape                         | Data Type          |
++=======+===============================+====================+
+| X     | (~35,000, 11)                 | Metadata vector    |
++-------+-------------------------------+--------------------+
+| y     | (~35,000, height, width, 3)   | RGB image (target) |
++-------+-------------------------------+--------------------+
