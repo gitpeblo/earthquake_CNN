@@ -213,42 +213,60 @@ we first  slightly shrunk the grid cells.
 
 --
 
-This grid consitutes a segmentation of the image into individual
-proxy-bay regions, that we can now apply to the post-earthquake images.
-This entails losing some of the information at the edges of the bays,
-but it allows us to focus on the core structural content without the artifacts
-introduced by the grid lines and ticks.
+This grid defines the effective segmentation of the image into individual
+proxy-bay regions, which we can then apply to the corresponding post-earthquake
+images.
+While this process does result in minor loss of edge information around each bay,
+it allows us to focus on the core structural content and avoid artifacts such
+as grid lines and mesh ticks.
 
-For the post-earthquake image shown above, the cropped bays of interest
-extracted from the bottom row appear as shown below:
+After extraction, each bay image is resized to match the original template
+shape via bicubic interpolation.
+While this does **not** preserve the exact size of every bay in the image—since
+some may vary by a few pixels—it provides a consistent target size across all
+samples.
+For our purposes, this caveat is acceptable, as it ensures uniformity in the
+training dataset.
+
+For the post-earthquake image example shown at the top, the cropped bays of
+interest extracted from the bottom row appear as shown below:
 
 .. raw:: html
 
     <div style="display: flex; justify-content: center; gap: 40px;">
 
       <div style="text-align: center;">
-        <img src="_static/preprocessing/02_crop_R9_C10_r0_c4.png" width="200px" alt="Input image">
+        <img src="_static/preprocessing/03_resized_R9_C10_r0_c4.png" width="200px" alt="Input image">
         <p><em>Bottom-right extraction</em></p>
       </div>
 
       <div style="text-align: center;">
-        <img src="_static/preprocessing/02_crop_R9_C10_r0_c5.png" width="200px" alt="Output image">
+        <img src="_static/preprocessing/03_resized_R9_C10_r0_c5.png" width="200px" alt="Output image">
         <p><em>Bottom-left extraction</em></p>
       </div>
 
     </div>
 
-After extraction, each bay image is resized to match the original template
-shape via bicubic interpolation.
+To reduce high-frequency noise (like the grey pixels visible in the images above),
+a Gaussian blur is applied.
 
-This will not yield the exact size of each of the original bays at different
-image locations (as they are a few pixel different from each other), but that
-of the top-left bay from which the template has been cropped.
-However, for the purposes of our model, this caveat is acceptable, as it
-ensures uniformity across the dataset.
+.. raw:: html
 
-Additionally, a Gaussian blur is applied to reduce high-frequency noise
-(like grid lines), followed by median filtering to restore structural detail.
+    <div style="display: flex; justify-content: center; gap: 40px;">
+
+      <div style="text-align: center;">
+        <img src="_static/preprocessing/04_smooth_R9_C10_r0_c4.png" width="200px" alt="Input image">
+        <p><em>Bottom-right extraction</em></p>
+      </div>
+
+      <div style="text-align: center;">
+        <img src="_static/preprocessing/04_smooth_R9_C10_r0_c5.png" width="200px" alt="Output image">
+        <p><em>Bottom-left extraction</em></p>
+      </div>
+
+    </div>
+
+This is followed by median filtering to restore structural detail.
 
 Finally, any bay images that are predominantly dark (i.e., the ones that are
 not subject of the analysis, such as the first and last 4 columns in the images
