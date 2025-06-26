@@ -152,7 +152,7 @@ The next steps involve extracting a template from the top-left cell of the
 grid, which serves as a reference for the bay structure.
 First, we identify the intersection points of the detected grid edges.
 
-.. figure:: _static/preprocessing/03_intersection_DesignPointA1000.png.png
+.. figure:: _static/preprocessing/03_intersection_DesignPointA1000.png
    :width: 400px
    :align: center
    :alt: Grid edge intersection detection
@@ -162,7 +162,7 @@ First, we identify the intersection points of the detected grid edges.
 Next, a template is extracted from the top-left bay, using the previously
 identified intersection points.
 
-.. figure:: _static/preprocessing/04_template_DesignPointA1000.png.png
+.. figure:: _static/preprocessing/04_template_DesignPointA1000.png
    :width: 100px
    :align: center
    :alt: Template bay extraction
@@ -172,7 +172,7 @@ identified intersection points.
 Template matching is then used to locate all other bay regions that resemble
 the extracted template.
 
-.. figure:: _static/preprocessing/05_matches_DesignPointA1000.png.png
+.. figure:: _static/preprocessing/05_matches_DesignPointA1000.png
    :width: 400px
    :align: center
    :alt: Template matching result
