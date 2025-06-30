@@ -49,7 +49,7 @@ into a 2D feature map
 upsamples this feature map to the desired image resolution
 
 .. figure:: _static/padding_strides_transposed.gif
-   :width: 30%
+   :width: 240px
    :align: center
    :alt: Illustration of ConvTranspose2d upsampling with padding and strides
 
