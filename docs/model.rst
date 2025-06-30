@@ -3,8 +3,6 @@ Convolutional Neural Network Model
 
 .. https://github.com/vdumoulin/conv_arithmetic
 
-Model Architecture
-==================
 
 Our predictive model is a **convolutional decoder** that generates the
 post-earthquake stress image of a single building bay, conditioned on a vector
