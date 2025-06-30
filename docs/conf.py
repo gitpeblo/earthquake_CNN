@@ -31,3 +31,15 @@ html_logo = "_static/logo.png"   # If you want a custom logo
 html_theme_options = {
     "sidebar_hide_name": False,
 }
+
+# Convert GIFs
+from sphinx.builders.latex import LaTeXBuilder
+
+latex_elements = {
+    # Tell LaTeX to convert gif to png for images
+    'figure_align': 'H',
+    'inputenc': '\\usepackage[utf8]{inputenc}',
+}
+
+# Add gif to supported image types for LaTeX
+LaTeXBuilder.supported_image_types = ['.png', '.jpg', '.jpeg', '.pdf', '.eps', '.svg', '.gif']
