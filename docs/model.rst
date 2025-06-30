@@ -27,6 +27,7 @@ RGB image, using two main stages:
 
 1. A **fully connected projection block** transforms the input condition vector
 into a 2D feature map
+
 2. A stack of **transposed convolutional layers** upsamples this feature map
 to the desired image resolution
 
