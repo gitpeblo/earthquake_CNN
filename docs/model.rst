@@ -48,12 +48,12 @@ into a 2D feature map
 2. A stack of **transposed convolutional layers** (a.k.a. "upsampling layers")
 upsamples this feature map to the desired image resolution
 
-.. image:: _static/padding_strides_transposed.gif
-   :width: 60%
+.. figure:: _static/padding_strides_transposed.gif
+   :width: 30%
    :align: center
    :alt: Illustration of ConvTranspose2d upsampling with padding and strides
 
-*Figure adapted from* `conv_arithmetic repository <https://github.com/vdumoulin/conv_arithmetic/blob/master/gif/padding_strides_transposed.gif>`_
+   Figure adapted from `conv_arithmetic repository <https://github.com/vdumoulin/conv_arithmetic/blob/master/gif/padding_strides_transposed.gif>`_
 
 The conditioning vector is first normalized via **BatchNorm1d**, then passed
 through two fully connected layers with ReLU activations.
