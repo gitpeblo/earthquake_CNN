@@ -51,7 +51,7 @@ comparison between predictions and ground truth at the building level.
 
 The following images show the post-earthquake stress distribution reconstructed
 at the building level, alongside the model prediction.
-The example refers to the same building shown in `:ref:data_section`.
+The example refers to the same building shown in :ref:`data_section`.
 
 .. raw:: html
 
