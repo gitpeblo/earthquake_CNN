@@ -23,7 +23,7 @@ then upsampled to the full resolution, which can introduce some quantization
 effects.
 
 This effect is partially mitigated during the reconstruction of the building
-from individual bays (:ref:`reconstruction`)..
+from individual bays (:ref:`reconstruction`).
 
 .. _reconstruction:
 Building Reconstruction
@@ -39,19 +39,19 @@ These predicted bay images are then systematically reassembled according to
 their spatial positions within the building’s grid, effectively reconstructing
 the full post-earthquake stress map of the building.
 
-Similarly, the ground truth bay images are extracted and arranged in the same
-manner, to reconstruct the ground truth.
-This is done since the original bays have slightly different sizes
-and aspect ratios, which can lead to minor variations in the pixel dimensions
-of the reconstructed images.
-Reshaping them all to the template size allows instead for direct comparison
-between predictions and ground truth on a building level.
+Similarly, the ground truth bay images are reshaped and arranged in the same
+manner to reconstruct the ground truth building.
+This is necessary because the original bays have slightly different sizes and
+aspect ratios, which can lead to minor variations in the pixel dimensions of
+the reconstructed images.
+Reshaping all of them to a common template size allows for a direct visual
+comparison between predictions and ground truth at the building level.
 
 --
 
-The following images correspond to reconstructed post-earthquake stress
-distribution and the model prediction for the same building shown earlier in\
-`ref:data section`.
+The following images show the post-earthquake stress distribution reconstructed
+at the building level, alongside the model prediction.
+The example refers to the same building shown in `ref:data section`.
 
 .. raw:: html
 
