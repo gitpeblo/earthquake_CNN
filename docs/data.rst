@@ -280,19 +280,19 @@ visible in the images above, a Gaussian blur is applied.
 .. container:: centered-images
 
    .. list-table::
-      :widths: 50 50
+      :widths: 40 40
       :align: center
       :class: align-center
       :header-rows: 0
 
       * - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c4.png
-            :width: 65%
+            :width: 60%
             :alt: Smoothed bottom-left extraction
 
             *Smoothed bottom-left extraction*
 
         - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c5.png
-            :width: 65%
+            :width: 60%
             :alt: Smoothed bottom-right extraction
 
             *Smoothed bottom-right extraction*
@@ -303,7 +303,7 @@ detail.
 .. container:: centered-images
 
    .. list-table::
-      :widths: 50 50
+      :widths: 60 60
       :align: center
       :class: align-center
       :header-rows: 0
