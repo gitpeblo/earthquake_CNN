@@ -32,7 +32,7 @@ Our predictive model is a **convolutional decoder** that generates the
 post-earthquake stress image of a single building bay, conditioned on a vector
 of input parameters.
 
-.. image:: _static/model/graph_decoder_.png
+.. image:: /_static/model/graph_decoder.png
    :width: 80%
    :align: center
    :alt: Model architecture
