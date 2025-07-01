@@ -297,8 +297,9 @@ visible in the images above, a Gaussian blur is applied.
 
             *Smoothed bottom-right extraction*
 
-This is ultimately followed by a median filtering aimed at restoring structural
-detail.
+This is ultimately followed by a median filtering operation, specifically
+applied to enhance the clarity of the extracted features by reducing residual 
+oise while preserving important structural details.
 
 .. container:: centered-images
 
