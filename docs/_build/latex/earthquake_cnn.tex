@@ -64,7 +64,7 @@
 
 
 \title{earthquake\_CNN}
-\date{Jun 30, 2025}
+\date{Jul 01, 2025}
 \release{0.1}
 \author{Paolo Bonfini}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -965,17 +965,19 @@ Resizes each image to 64 × 64 and normalizes it to the {[}0, 1{]} range
 The dataset is split into three subsets using an 80/10/10 split.
 
 
-\section{Model architecture}
-\label{\detokenize{model:model-architecture}}
+\section{Model architecture (PyTorch)}
+\label{\detokenize{model:model-architecture-pytorch}}
 \sphinxAtStartPar
 Our predictive model is a \sphinxstylestrong{convolutional decoder} that generates the
 post\sphinxhyphen{}earthquake stress image of a single building bay, conditioned on a vector
 of input parameters.
 
-\noindent{\hspace*{\fill}\sphinxincludegraphics[width=1.000\linewidth]{{graph_decoder}.png}\hspace*{\fill}}
+\begin{figure}[htbp]
+\centering
+\capstart
 
-\sphinxAtStartPar
-\textendash{}
+\noindent\sphinxincludegraphics[width=1.000\linewidth]{{graph_decoder}.png}
+\caption{Model architecture. Diagram created with \sphinxhref{https://github.com/willyfh/visualtorch}{VisualTorch}.}\label{\detokenize{model:id1}}\end{figure}
 
 \sphinxAtStartPar
 The model effectively performs a \sphinxstylestrong{regression} from the conditioning vector
@@ -993,8 +995,8 @@ upsamples this feature map to the desired image resolution
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics[width=240\sphinxpxdimen]{{_static/padding_strides_transposed}.png}
-\caption{Figure adapted from \sphinxhref{https://github.com/vdumoulin/conv\_arithmetic/blob/master/gif/padding\_strides\_transposed.gif}{conv\_arithmetic repository}}\label{\detokenize{model:id1}}\end{figure}
+\noindent\sphinxincludegraphics[width=240\sphinxpxdimen]{{_static/model/padding_strides_transposed}.png}
+\caption{Figure adapted from \sphinxhref{https://github.com/vdumoulin/conv\_arithmetic/blob/master/gif/padding\_strides\_transposed.gif}{conv\_arithmetic repository}}\label{\detokenize{model:id2}}\end{figure}
 
 \sphinxAtStartPar
 The conditioning vector is first normalized via \sphinxstylestrong{BatchNorm1d}, then passed
@@ -1008,11 +1010,104 @@ layers, which increase the spatial resolution while reducing the number of chann
 Finally, a \sphinxstylestrong{Conv2d} layer with Sigmoid activation maps the upsampled features
 to the desired 3\sphinxhyphen{}channel RGB output, normalized to the {[}0, 1{]} range.
 
+
+\section{Training}
+\label{\detokenize{model:training}}
+\sphinxAtStartPar
+The model is trained for 1000 epochs to minimize the difference between the
+predicted stress images and the ground truth post\sphinxhyphen{}earthquake images using a
+regression loss function, namely the Mean Squared Error (MSE).
+Early stopping based on validation loss is applied to retain the best model checkpoint.
+
+\sphinxAtStartPar
+Training uses the Adam optimizer with a relatively low learning rate of 0.005
+and a large batch size of 256.
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=0.800\linewidth]{{history}.png}
+\caption{Training and validation loss over epochs, illustrating the model’s convergence.}\label{\detokenize{model:id3}}\end{figure}
+
+\sphinxAtStartPar
+Training is performed on all bays extracted from all points of view.
+Because the viewpoint (POV) is included in the conditioning vector, the model
+can directly learn to reproduce diverse stress patterns specific to each
+perspective.
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=0.800\linewidth]{{early_prediction}.png}
+\caption{Example prediction from the validation set at epoch 0, showing the ground
+truth (left), model output (center), and overlay comparison (right).}\label{\detokenize{model:id4}}\end{figure}
+
 \sphinxstepscope
 
 
 \chapter{Model Predictions}
-\label{\detokenize{predictions:model-predictions}}\label{\detokenize{predictions::doc}}
+\label{\detokenize{predictions:model-predictions}}\label{\detokenize{predictions:prediction-section}}\label{\detokenize{predictions::doc}}
+\sphinxAtStartPar
+The model achieves a Mean Squared Error (MSE) of approximately 0.017 on the
+test set, corresponding to a Root Mean Squared Error (RMSE) of about 13.0\%
+relative to the normalized image intensity range {[}0, 1{]}.
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=0.800\linewidth]{{predictions_bay}.png}
+\caption{Example of prediction for a single bay, before assembling, showing
+the ground truth (left), the model prediction (center), and an overlay
+comparison (right).}\label{\detokenize{predictions:id1}}\end{figure}
+
+\sphinxAtStartPar
+Notice that the predictions are slightly pixellated, which is a common
+artifact of the upsampling process in convolutional neural networks.
+This is due to the model generating a low\sphinxhyphen{}resolution feature map that is
+then upsampled to the full resolution, which can introduce some quantization
+effects.
+
+\sphinxAtStartPar
+This effect is partially mitigated during the reconstruction of the building
+from individual bays ({\hyperref[\detokenize{predictions:reconstruction}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{Building Reconstruction}}}}}).
+
+
+\section{Building Reconstruction}
+\label{\detokenize{predictions:building-reconstruction}}\label{\detokenize{predictions:reconstruction}}
+\sphinxAtStartPar
+To visualize the predicted stress for an entire building, the model outputs
+for each individual bay are first reshaped to match the size and layout of
+the original bay template.
+This reshaping happens via bicubic interpolation, which partially smooths out
+the pixellated artifacts introduced during the upsampling process.
+
+\sphinxAtStartPar
+These predicted bay images are then systematically reassembled according to
+their spatial positions within the building’s grid, effectively reconstructing
+the full post\sphinxhyphen{}earthquake stress map of the building.
+
+\sphinxAtStartPar
+Similarly, the ground truth bay images are reshaped and arranged in the same
+manner to reconstruct the ground truth building.
+This is necessary because the original bays have slightly different sizes and
+aspect ratios, which can lead to minor variations in the pixel dimensions of
+the reconstructed images.
+Reshaping all of them to a common template size allows for a direct visual
+comparison between predictions and ground truth at the building level.
+
+\sphinxAtStartPar
+\textendash{}
+
+\sphinxAtStartPar
+The following images show the post\sphinxhyphen{}earthquake stress distribution reconstructed
+at the building level, alongside the model prediction.
+The example refers to the same building shown in \sphinxtitleref{ref:data\_section}.
+
+
+
 
 \chapter{Project Overview}
 \label{\detokenize{index:project-overview}}
