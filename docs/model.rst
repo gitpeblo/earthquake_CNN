@@ -25,14 +25,14 @@ The data is handled using a custom PyTorch `Dataset` class that:
 
 The dataset is split into three subsets using an 80/10/10 split.
 
-Model architecture
-------------------
+Model architecture (PyTorch)
+----------------------------
 
 Our predictive model is a **convolutional decoder** that generates the
 post-earthquake stress image of a single building bay, conditioned on a vector
 of input parameters.
 
-.. image:: _static/model/graph_decoder.png
+.. image:: _static/model/graph_decoder_.png
    :width: 80%
    :align: center
    :alt: Model architecture
