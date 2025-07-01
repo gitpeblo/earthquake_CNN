@@ -323,7 +323,7 @@ Metadata
 ~~~~~~~~~
 
 The predicting variabels are assembled from the metadata introduced in
-:ref:`_metadata` with two minor preprocessing steps. 
+:ref:`metadata` with two minor preprocessing steps. 
 
 First, the **POV** feature is converted from a categorical variable to a
 numerical format using **one-hot encoding** (**OHE**), resulting in three new
