@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.4)  1 JUL 2025 16:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.4)  1 JUL 2025 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,142 +956,142 @@ e 590.
 File: 03_resized_R9_C10_r0_c4.png Graphic file (type png)
 <use 03_resized_R9_C10_r0_c4.png>
 Package pdftex.def Info: 03_resized_R9_C10_r0_c4.png  used on input line 629.
-(pdftex.def)             Requested size: 156.01358pt x 115.81436pt.
+(pdftex.def)             Requested size: 133.72786pt x 99.27065pt.
 <03_resized_R9_C10_r0_c5.png, id=166, 73.02281pt x 54.2025pt>
 File: 03_resized_R9_C10_r0_c5.png Graphic file (type png)
 <use 03_resized_R9_C10_r0_c5.png>
 Package pdftex.def Info: 03_resized_R9_C10_r0_c5.png  used on input line 636.
-(pdftex.def)             Requested size: 156.01358pt x 115.81436pt.
+(pdftex.def)             Requested size: 133.72786pt x 99.27065pt.
 <04_smooth_R9_C10_r0_c4.png, id=167, 73.02281pt x 54.2025pt>
 File: 04_smooth_R9_C10_r0_c4.png Graphic file (type png)
 <use 04_smooth_R9_C10_r0_c4.png>
 Package pdftex.def Info: 04_smooth_R9_C10_r0_c4.png  used on input line 661.
-(pdftex.def)             Requested size: 156.01358pt x 115.81436pt.
+(pdftex.def)             Requested size: 133.72786pt x 99.27065pt.
 <04_smooth_R9_C10_r0_c5.png, id=168, 73.02281pt x 54.2025pt>
 File: 04_smooth_R9_C10_r0_c5.png Graphic file (type png)
 <use 04_smooth_R9_C10_r0_c5.png>
 Package pdftex.def Info: 04_smooth_R9_C10_r0_c5.png  used on input line 668.
-(pdftex.def)             Requested size: 156.01358pt x 115.81436pt.
+(pdftex.def)             Requested size: 133.72786pt x 99.27065pt.
 <05_median_R9_C10_r0_c4.png, id=169, 73.02281pt x 54.2025pt>
 File: 05_median_R9_C10_r0_c4.png Graphic file (type png)
 <use 05_median_R9_C10_r0_c4.png>
-Package pdftex.def Info: 05_median_R9_C10_r0_c4.png  used on input line 693.
-(pdftex.def)             Requested size: 160.47208pt x 119.12427pt.
+Package pdftex.def Info: 05_median_R9_C10_r0_c4.png  used on input line 694.
+(pdftex.def)             Requested size: 151.55507pt x 112.50447pt.
 <05_median_R9_C10_r0_c5.png, id=170, 73.02281pt x 54.2025pt>
 File: 05_median_R9_C10_r0_c5.png Graphic file (type png)
 <use 05_median_R9_C10_r0_c5.png>
-Package pdftex.def Info: 05_median_R9_C10_r0_c5.png  used on input line 700.
-(pdftex.def)             Requested size: 160.47208pt x 119.12427pt.
+Package pdftex.def Info: 05_median_R9_C10_r0_c5.png  used on input line 701.
+(pdftex.def)             Requested size: 151.55507pt x 112.50447pt.
  [9 <./03_resized_R9_C10_r0_c4.png (PNG copy)> <./03_resized_R9_C10_r0_c5.png (
 PNG copy)> <./04_smooth_R9_C10_r0_c4.png (PNG copy)> <./04_smooth_R9_C10_r0_c5.
 png (PNG copy)> <./05_median_R9_C10_r0_c4.png (PNG copy)> <./05_median_R9_C10_r
 0_c5.png (PNG copy)>]
-Overfull \hbox (3.8821pt too wide) in paragraph at lines 974--974
+Overfull \hbox (3.8821pt too wide) in paragraph at lines 975--975
 []\T1/qhv/m/n/10 length| 
  []
 
 
-Overfull \hbox (3.32527pt too wide) in paragraph at lines 974--974
+Overfull \hbox (3.32527pt too wide) in paragraph at lines 975--975
 []\T1/qhv/m/n/10 width| 
  []
 
 
-Overfull \hbox (3.88924pt too wide) in paragraph at lines 974--974
+Overfull \hbox (3.88924pt too wide) in paragraph at lines 975--975
 []\T1/qhv/m/n/10 height| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--974
+Underfull \hbox (badness 10000) in paragraph at lines 975--975
 []\T1/qhv/m/n/10 thick-
  []
 
 
-Overfull \hbox (4.69736pt too wide) in paragraph at lines 974--974
+Overfull \hbox (4.69736pt too wide) in paragraph at lines 975--975
 []\T1/qhv/m/n/10 POV_A| 
  []
 
 
-Overfull \hbox (4.69736pt too wide) in paragraph at lines 974--974
+Overfull \hbox (4.69736pt too wide) in paragraph at lines 975--975
 []\T1/qhv/m/n/10 POV_B| 
  []
 
 
-Overfull \hbox (4.77588pt too wide) in paragraph at lines 974--974
+Overfull \hbox (4.77588pt too wide) in paragraph at lines 975--975
 []\T1/qhv/m/n/10 POV_C| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--974
+Underfull \hbox (badness 10000) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 974--974
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 974--974
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 5.091223| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--974
+Underfull \hbox (badness 10000) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 974--974
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 974--974
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 5.091223| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--974
+Underfull \hbox (badness 10000) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 974--974
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 974--974
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 5.091223| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--974
+Underfull \hbox (badness 10000) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 974--974
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 974--974
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 4.298888| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--974
+Underfull \hbox (badness 10000) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 974--974
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 974--974
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 975--975
 []\T1/qtm/m/n/10 4.298888| 
  []
 
@@ -1100,7 +1100,7 @@ Chapter 3.
 <graph_decoder.png, id=188, 295.3434pt x 72.9927pt>
 File: graph_decoder.png Graphic file (type png)
 <use graph_decoder.png>
-Package pdftex.def Info: graph_decoder.png  used on input line 1117.
+Package pdftex.def Info: graph_decoder.png  used on input line 1118.
 (pdftex.def)             Requested size: 469.75502pt x 116.10904pt.
 [11
 
@@ -1110,18 +1110,18 @@ t>
 File: _static/model/padding_strides_transposed.png Graphic file (type png)
 <use _static/model/padding_strides_transposed.png>
 Package pdftex.def Info: _static/model/padding_strides_transposed.png  used on 
-input line 1136.
+input line 1137.
 (pdftex.def)             Requested size: 180.67383pt x 205.37259pt.
 <history.png, id=199, 570.933pt x 281.853pt>
 File: history.png Graphic file (type png)
 <use history.png>
-Package pdftex.def Info: history.png  used on input line 1168.
+Package pdftex.def Info: history.png  used on input line 1169.
 (pdftex.def)             Requested size: 375.80544pt x 185.52896pt.
  [12 <./_static/model/padding_strides_transposed.png>]
 <early_prediction.png, id=206, 629.4717pt x 210.3057pt>
 File: early_prediction.png Graphic file (type png)
 <use early_prediction.png>
-Package pdftex.def Info: early_prediction.png  used on input line 1181.
+Package pdftex.def Info: early_prediction.png  used on input line 1182.
 (pdftex.def)             Requested size: 375.80544pt x 125.55542pt.
  [13 <./history.png> <./early_prediction.png>] [14
 
@@ -1130,17 +1130,17 @@ Chapter 4.
 <predictions_bay.png, id=219, 706.13812pt x 233.37187pt>
 File: predictions_bay.png Graphic file (type png)
 <use predictions_bay.png>
-Package pdftex.def Info: predictions_bay.png  used on input line 1199.
+Package pdftex.def Info: predictions_bay.png  used on input line 1200.
 (pdftex.def)             Requested size: 375.80544pt x 124.19926pt.
 <groundtruth_DP_A_1000.png, id=222, 730.22812pt x 487.8225pt>
 File: groundtruth_DP_A_1000.png Graphic file (type png)
 <use groundtruth_DP_A_1000.png>
-Package pdftex.def Info: groundtruth_DP_A_1000.png  used on input line 1258.
+Package pdftex.def Info: groundtruth_DP_A_1000.png  used on input line 1259.
 (pdftex.def)             Requested size: 222.87752pt x 148.88612pt.
 <predicted_DP_A_1000.png, id=223, 730.22812pt x 487.8225pt>
 File: predicted_DP_A_1000.png Graphic file (type png)
 <use predicted_DP_A_1000.png>
-Package pdftex.def Info: predicted_DP_A_1000.png  used on input line 1265.
+Package pdftex.def Info: predicted_DP_A_1000.png  used on input line 1266.
 (pdftex.def)             Requested size: 222.87752pt x 148.88612pt.
 [15 <./predictions_bay.png>] (./earthquake_cnn.ind) [16 <./groundtruth_DP_A_100
 0.png (PNG copy)> <./predicted_DP_A_1000.png (PNG copy)>] (./earthquake_cnn.aux
@@ -1165,7 +1165,7 @@ s/type1/public/tex-gyre/qhvbi.pfb></usr/share/texmf/fonts/type1/public/tex-gyre
 /qhvr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/te
 xmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fonts/type1/public/t
 ex-gyre/qtmri.pfb>
-Output written on earthquake_cnn.pdf (20 pages, 1372692 bytes).
+Output written on earthquake_cnn.pdf (20 pages, 1372788 bytes).
 PDF statistics:
  280 PDF objects out of 1000 (max. 8388607)
  215 compressed objects within 3 object streams
