@@ -37,6 +37,8 @@ of input parameters.
    :align: center
    :alt: Model architecture
 
+   Model architecture. Diagram created with `VisualTorch <https://github.com/willyfh/visualtorch>`_.
+
 --
 
 The model effectively performs a **regression** from the conditioning vector

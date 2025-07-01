@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.4)  30 JUN 2025 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.4)  30 JUN 2025 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -834,12 +834,14 @@ tawesome5
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 73.
+(./earthquake_cnn.out) (./earthquake_cnn.out)
 \@outlinefile=\write5
 \openout5 = `earthquake_cnn.out'.
 
 Package hyperref Info: Option `pageanchor' set `false' on input line 81.
 LaTeX Font Info:    Trying to load font information for T1+qhv on input line 81
 .
+
 (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
@@ -859,12 +861,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 dvips/tex-gyre/q-ec.enc}] [2
 
 
-]
-No file earthquake_cnn.toc.
+] (./earthquake_cnn.toc)
 \tf@toc=\write6
 \openout6 = `earthquake_cnn.toc'.
 
-[1
+ [1
 
 ] [2
 
@@ -874,77 +875,67 @@ LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 1
 02.
 (/usr/share/texmf/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
-)
+) [1
 
-LaTeX Warning: Hyper reference `data:metadata' on page 1 undefined on input lin
-e 148.
-
-[1
-
-{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
-
-LaTeX Warning: Hyper reference `data:preprocessing' on page 2 undefined on inpu
-t line 382.
-
-[2]
-<01_grey_DesignPointA1000.png, id=48, 749.04843pt x 502.12593pt>
+{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [2]
+<01_grey_DesignPointA1000.png, id=108, 749.04843pt x 502.12593pt>
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 4
 49.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 File: 01_grey_DesignPointA1000.png Graphic file (type png)
 <use 01_grey_DesignPointA1000.png>
 Package pdftex.def Info: 01_grey_DesignPointA1000.png  used on input line 449.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-<02_edges_DesignPointA1000.png, id=49, 749.04843pt x 502.12593pt>
+<02_edges_DesignPointA1000.png, id=109, 749.04843pt x 502.12593pt>
 File: 02_edges_DesignPointA1000.png Graphic file (type png)
 <use 02_edges_DesignPointA1000.png>
 Package pdftex.def Info: 02_edges_DesignPointA1000.png  used on input line 461.
 
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
- [3 <./01_grey_DesignPointA1000.png (PNG copy)> <./02_edges_DesignPointA1000.pn
-g (PNG copy)>]
-<03_intersection_DesignPointA1000.png, id=57, 749.04843pt x 502.12593pt>
+<03_intersection_DesignPointA1000.png, id=110, 749.04843pt x 502.12593pt>
 File: 03_intersection_DesignPointA1000.png Graphic file (type png)
 <use 03_intersection_DesignPointA1000.png>
 Package pdftex.def Info: 03_intersection_DesignPointA1000.png  used on input li
 ne 473.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-<04_template_DesignPointA1000.png, id=58, 73.02281pt x 54.2025pt>
+ [3 <./01_grey_DesignPointA1000.png (PNG copy)> <./02_edges_DesignPointA1000.pn
+g (PNG copy)>]
+<04_template_DesignPointA1000.png, id=118, 73.02281pt x 54.2025pt>
 File: 04_template_DesignPointA1000.png Graphic file (type png)
 <use 04_template_DesignPointA1000.png>
 Package pdftex.def Info: 04_template_DesignPointA1000.png  used on input line 4
 84.
 (pdftex.def)             Requested size: 75.28076pt x 55.88377pt.
-<05_matches_DesignPointA1000.png, id=59, 749.04843pt x 502.12593pt>
+<05_matches_DesignPointA1000.png, id=119, 749.04843pt x 502.12593pt>
 File: 05_matches_DesignPointA1000.png Graphic file (type png)
 <use 05_matches_DesignPointA1000.png>
 Package pdftex.def Info: 05_matches_DesignPointA1000.png  used on input line 49
 5.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-<06_bbox_DesignPointA1000.png, id=60, 749.04843pt x 502.12593pt>
+<06_bbox_DesignPointA1000.png, id=120, 749.04843pt x 502.12593pt>
 File: 06_bbox_DesignPointA1000.png Graphic file (type png)
 <use 06_bbox_DesignPointA1000.png>
 Package pdftex.def Info: 06_bbox_DesignPointA1000.png  used on input line 505.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-
-[4 <./03_intersection_DesignPointA1000.png (PNG copy)> <./04_template_DesignPoi
-ntA1000.png (PNG copy)> <./05_matches_DesignPointA1000.png (PNG copy)>]
-<07_grid_DesignPointA1000.png, id=68, 749.04843pt x 502.12593pt>
+<07_grid_DesignPointA1000.png, id=121, 749.04843pt x 502.12593pt>
 File: 07_grid_DesignPointA1000.png Graphic file (type png)
 <use 07_grid_DesignPointA1000.png>
 Package pdftex.def Info: 07_grid_DesignPointA1000.png  used on input line 519.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-<08_shrunk_grid_DesignPointA1000.png, id=69, 810.77907pt x 609.77812pt>
+<08_shrunk_grid_DesignPointA1000.png, id=122, 810.77907pt x 609.77812pt>
 File: 08_shrunk_grid_DesignPointA1000.png Graphic file (type png)
 <use 08_shrunk_grid_DesignPointA1000.png>
 Package pdftex.def Info: 08_shrunk_grid_DesignPointA1000.png  used on input lin
 e 530.
 (pdftex.def)             Requested size: 301.12305pt x 226.47038pt.
 
-[5 <./06_bbox_DesignPointA1000.png (PNG copy)> <./07_grid_DesignPointA1000.png 
-(PNG copy)>] [6 <./08_shrunk_grid_DesignPointA1000.png (PNG copy)>]
+[4 <./03_intersection_DesignPointA1000.png (PNG copy)> <./04_template_DesignPoi
+ntA1000.png (PNG copy)>] [5 <./05_matches_DesignPointA1000.png (PNG copy)> <./0
+6_bbox_DesignPointA1000.png (PNG copy)>] [6 <./07_grid_DesignPointA1000.png (PN
+G copy)> <./08_shrunk_grid_DesignPointA1000.png (PNG copy)>]
 Overfull \hbox (3.8821pt too wide) in paragraph at lines 836--836
 []\T1/qhv/m/n/10 length| 
  []
@@ -1058,37 +1049,19 @@ Overfull \hbox (5.35413pt too wide) in paragraph at lines 836--836
 
 ]
 Chapter 2.
-
-LaTeX Warning: Hyper reference `data:data-section' on page 9 undefined on input
- line 918.
-
-<graph_decoder.png, id=90, 295.3434pt x 72.9927pt>
+<graph_decoder.png, id=150, 295.3434pt x 72.9927pt>
 File: graph_decoder.png Graphic file (type png)
 <use graph_decoder.png>
 Package pdftex.def Info: graph_decoder.png  used on input line 975.
 (pdftex.def)             Requested size: 469.75502pt x 116.10904pt.
 [9 <./graph_decoder.png>]
-
-! LaTeX Error: Unknown graphics extension: .gif.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.996 ...xdimen]{{padding_strides_transposed}.gif}
-                                                  
-? 
-
-! LaTeX Error: Unknown graphics extension: .gif.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.996 ...xdimen]{{padding_strides_transposed}.gif}
-                                                  
-? 
-[10]
+<_static/padding_strides_transposed.png, id=159, 297.36093pt x 338.01282pt>
+File: _static/padding_strides_transposed.png Graphic file (type png)
+<use _static/padding_strides_transposed.png>
+Package pdftex.def Info: _static/padding_strides_transposed.png  used on input 
+line 996.
+(pdftex.def)             Requested size: 180.67383pt x 205.37259pt.
+ [10 <./_static/padding_strides_transposed.png>]
 Chapter 3.
 [11
 
@@ -1096,45 +1069,31 @@ Chapter 3.
 
 ]
 Chapter 4.
-No file earthquake_cnn.ind.
-[13] (./earthquake_cnn.aux)
+(./earthquake_cnn.ind) [13] (./earthquake_cnn.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `earthquake_cnn.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `earthquake_cnn.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  460A65D249E24AA527E598B78C9AD1B2;1849.
+Package rerunfilecheck Info: File `earthquake_cnn.out' has not changed.
+(rerunfilecheck)             Checksum: 460A65D249E24AA527E598B78C9AD1B2;1849.
  ) 
 Here is how much of TeX's memory you used:
- 19997 strings out of 474222
- 356765 string characters out of 5748734
- 1951975 words of memory out of 5000000
- 41826 multiletter control sequences out of 15000+600000
+ 19998 strings out of 474222
+ 356266 string characters out of 5748734
+ 1955975 words of memory out of 5000000
+ 41818 multiletter control sequences out of 15000+600000
  608682 words of font info for 75 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 72i,12n,83p,1203b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,12n,83p,1203b,519s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf/font
 s/type1/public/tex-gyre/qhvbi.pfb></usr/share/texmf/fonts/type1/public/tex-gyre
 /qhvr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/te
 xmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fonts/type1/public/t
 ex-gyre/qtmri.pfb>
-Output written on earthquake_cnn.pdf (17 pages, 633643 bytes).
+Output written on earthquake_cnn.pdf (17 pages, 657447 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 118 compressed objects within 2 object streams
+ 219 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
  41 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -442,7 +442,7 @@ structural content by filtering out background pixels and cropping to the
 bounding region of the building.
 This ensures that the analysis focuses exclusively on the meaningful geometry.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \capstart
 
@@ -454,7 +454,7 @@ region.}\label{\detokenize{data:id2}}\end{figure}
 Next, we detect the underlying bay grid by identifying the most prominent
 vertical and horizontal edges.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \capstart
 
@@ -466,7 +466,7 @@ The next steps involve extracting a template from the top\sphinxhyphen{}left cel
 grid, which serves as a reference for the bay structure.
 First, we identify the upper\sphinxhyphen{}left intersection points of the detected grid edges.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \capstart
 
@@ -477,7 +477,7 @@ First, we identify the upper\sphinxhyphen{}left intersection points of the detec
 Next, a template is extracted from the top\sphinxhyphen{}left bay, using the previously
 identified intersection points.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \capstart
 
@@ -488,7 +488,7 @@ identified intersection points.
 Template matching is then used to locate all other bay regions that resemble
 the extracted template.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \capstart
 
@@ -498,7 +498,7 @@ the extracted template.
 \sphinxAtStartPar
 From the matched grid, we compute a bounding box that encloses the full bay layout.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \capstart
 
@@ -512,7 +512,7 @@ This ensures a consistent segmentation into cells of equal size.
 Hower, the cell grid is only an approximation of the actual bay layout, since
 the bays may not be perfectly aligned or may vary slightly in size.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \capstart
 
@@ -523,7 +523,7 @@ the bays may not be perfectly aligned or may vary slightly in size.
 To capture the actual content of the bays, and avoid the grid lines and ticks,
 we first  slightly shrunk the grid cells.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \capstart
 
@@ -989,11 +989,11 @@ into a 2D feature map
 2. A stack of \sphinxstylestrong{transposed convolutional layers} (a.k.a. “upsampling layers”)
 upsamples this feature map to the desired image resolution
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics[width=240\sphinxpxdimen]{{padding_strides_transposed}.gif}
+\noindent\sphinxincludegraphics[width=240\sphinxpxdimen]{{_static/padding_strides_transposed}.png}
 \caption{Figure adapted from \sphinxhref{https://github.com/vdumoulin/conv\_arithmetic/blob/master/gif/padding\_strides\_transposed.gif}{conv\_arithmetic repository}}\label{\detokenize{model:id1}}\end{figure}
 
 \sphinxAtStartPar

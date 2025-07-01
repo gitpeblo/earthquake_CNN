@@ -33,13 +33,14 @@ html_theme_options = {
 }
 
 # Convert GIFs
-from sphinx.builders.latex import LaTeXBuilder
+def setup(app):
+    from docutils import nodes
 
-latex_elements = {
-    # Tell LaTeX to convert gif to png for images
-    'figure_align': 'H',
-    'inputenc': '\\usepackage[utf8]{inputenc}',
-}
+    def replace_gif_with_png(app, doctree, fromdocname):
+        if app.builder.name == 'latex':
+            for node in doctree.traverse(nodes.image):
+                if node['uri'].endswith('.gif'):
+                    node['uri'] = node['uri'][:-4] + '.png'
 
-# Add gif to supported image types for LaTeX
-LaTeXBuilder.supported_image_types = ['.png', '.jpg', '.jpeg', '.pdf', '.eps', '.svg', '.gif']
+    app.connect('doctree-resolved', replace_gif_with_png)
+
