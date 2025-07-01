@@ -78,16 +78,12 @@ Early stopping based on validation loss is applied to retain the best model chec
 Training uses the Adam optimizer with a relatively low learning rate of 0.005
 and a large batch size of 256.
 
-Training History
-----------------
-
 .. figure:: _static/model/history.png
    :width: 80%
    :align: center
    :alt: Training and validation loss over epochs
 
-   Training and validation loss over epochs, illustrating the convergence
-   behavior of the model.
+   Training and validation loss over epochs, illustrating the model's convergence.
 
 Notice that training is performed on all bays extracted from all points of view,
 allowing the model to learn how to reproduce diverse stress patterns conditioned
