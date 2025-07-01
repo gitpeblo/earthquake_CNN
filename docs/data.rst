@@ -257,19 +257,19 @@ interest extracted from the bottom row appear as shown below:
 .. container:: centered-images
 
    .. list-table::
-      :widths: 40 40
+      :widths: 100 100
       :align: center
       :class: align-center
       :header-rows: 0
 
       * - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c4.png
-            :width: 60%
+            :width: 100px
             :alt: Extraction of the bottom-left bay
 
             *Extraction of the bottom-left bay*
 
         - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c5.png
-            :width: 60%
+            :width: 100px
             :alt: Extraction of the bottom-right bay
 
             *Extraction of the bottom-right bay*
@@ -280,19 +280,19 @@ visible in the images above, a Gaussian blur is applied.
 .. container:: centered-images
 
    .. list-table::
-      :widths: 40 40
+      :widths: 100 100
       :align: center
       :class: align-center
       :header-rows: 0
 
       * - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c4.png
-            :width: 60%
+            :width: 100px
             :alt: Smoothed bottom-left extraction
 
             *Smoothed bottom-left extraction*
 
         - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c5.png
-            :width: 60%
+            :width: 100px
             :alt: Smoothed bottom-right extraction
 
             *Smoothed bottom-right extraction*
@@ -303,19 +303,19 @@ detail.
 .. container:: centered-images
 
    .. list-table::
-      :widths: 40 40
+      :widths: 100 100
       :align: center
       :class: align-center
       :header-rows: 0
 
       * - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c4.png
-            :width: 40px
+            :width: 100px
             :alt: Filtered bottom-left extraction
 
             *Filtered bottom-left extraction*
 
         - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c5.png
-            :width: 40px
+            :width: 100px
             :alt: Filtered bottom-right extraction
 
             *Filtered bottom-right extraction*
