@@ -83,9 +83,10 @@ and a large batch size of 256.
 
    Training and validation loss over epochs, illustrating the model's convergence.
 
-Notice that training is performed on all bays extracted from all points of view,
-allowing the model to learn how to reproduce diverse stress patterns conditioned
-on the input vector.
+Training is performed on all bays extracted from all points of view.
+Because the viewpoint (POV) is included in the conditioning vector, the model
+can directly learn to reproduce diverse stress patterns specific to each
+perspective.
 
 .. figure:: _static/model/early_prediction.png
    :width: 80%
