@@ -31,6 +31,9 @@ html_logo = "_static/logo.png"   # If you want a custom logo
 html_theme_options = {
     "sidebar_hide_name": False,
 }
+latex_elements = {
+    'figure_align': 'H',
+}
 
 # Convert GIFs
 def setup(app):

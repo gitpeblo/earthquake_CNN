@@ -254,63 +254,71 @@ training dataset.
 For the post-earthquake image example shown at the top, the cropped bays of
 interest extracted from the bottom row appear as shown below:
 
-.. list-table::
-   :widths: 50 50
-   :align: center
-   :header-rows: 0
+.. container:: centered-images
 
-   * - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c4.png
-         :width: 100%
-         :alt: Extraction of the bottom-left bay
+   .. list-table::
+      :widths: 40 40
+      :align: center
+      :class: align-center
+      :header-rows: 0
 
-         *Extraction of the bottom-left bay*
+      * - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c4.png
+            :width: 100%
+            :alt: Extraction of the bottom-left bay
 
-     - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c5.png
-         :width: 100%
-         :alt: Extraction of the bottom-right bay
+            *Extraction of the bottom-left bay*
 
-         *Extraction of the bottom-right bay*
+        - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c5.png
+            :width: 100%
+            :alt: Extraction of the bottom-right bay
+
+            *Extraction of the bottom-right bay*
 
 To reduce high-frequency noise such as the grey pixels and the artifact segments
 visible in the images above, a Gaussian blur is applied.
 
-.. list-table::
-   :widths: 50 50
-   :align: center
-   :header-rows: 0
+.. container:: centered-images
 
-   * - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c4.png
-         :width: 100%
-         :alt: Smoothed bottom-left extraction
+   .. list-table::
+      :widths: 40 40
+      :align: center
+      :class: align-center
+      :header-rows: 0
 
-         *Smoothed bottom-left extraction*
+      * - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c4.png
+            :width: 100%
+            :alt: Smoothed bottom-left extraction
 
-     - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c5.png
-         :width: 100%
-         :alt: Smoothed bottom-right extraction
+            *Smoothed bottom-left extraction*
 
-         *Smoothed bottom-right extraction*
+        - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c5.png
+            :width: 100%
+            :alt: Smoothed bottom-right extraction
+
+            *Smoothed bottom-right extraction*
 
 This is ultimately followed by a median filtering aimed at restoring structural
 detail.
 
-.. list-table::
-   :widths: 50 50
-   :align: center
-   :header-rows: 0
+.. container:: centered-images
 
-   * - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c4.png
-         :width: 100%
-         :alt: Filtered bottom-left extraction
+   .. list-table::
+      :widths: 40 40
+      :align: center
+      :class: align-center
+      :header-rows: 0
 
-         *Filtered bottom-left extraction*
+      * - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c4.png
+            :width: 100%
+            :alt: Filtered bottom-left extraction
 
-     - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c5.png
-         :width: 100%
-         :alt: Filtered bottom-right extraction
+            *Filtered bottom-left extraction*
 
-         *Filtered bottom-right extraction*
+        - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c5.png
+            :width: 100%
+            :alt: Filtered bottom-right extraction
 
+            *Filtered bottom-right extraction*
 
 Finally, the dark bays—not used in the analysis (such as the first and last 4
 columns in the pre-earthquake image example above)—are excluded from the dataset.
