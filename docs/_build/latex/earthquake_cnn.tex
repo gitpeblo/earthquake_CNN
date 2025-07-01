@@ -88,6 +88,42 @@
 \sphinxstepscope
 
 
+\chapter{Project Overview}
+\label{\detokenize{overview:project-overview}}\label{\detokenize{overview:overview-section}}\label{\detokenize{overview::doc}}
+\sphinxAtStartPar
+This project focuses on simulating and predicting the effects of earthquakes
+on synthetic buildings composed of bays arranged in a 3D grid of size
+\sphinxstylestrong{R × C × K}, where \sphinxstylestrong{R} is the number of floors, and \sphinxstylestrong{C} and \sphinxstylestrong{K} are the
+number of bays along the building’s width and depth, respectively.
+Each building configuration is subjected to simulated seismic events, and the
+resulting structural stress is analyzed using \sphinxstylestrong{finite element analysis (FEA)}.
+
+\sphinxAtStartPar
+This synthetic dataset is used to create a machine learning model that can
+predict post\sphinxhyphen{}earthquake stress distributions based on pre\sphinxhyphen{}earthquake geometry
+and loading.
+
+
+\section{Objective}
+\label{\detokenize{overview:objective}}
+\sphinxAtStartPar
+The primary objective of this project is to develop a \sphinxstylestrong{convolutional neural network (CNN)}
+model capable of predicting the stress experienced by each bay in the building
+following an earthquake.
+The model takes as input the building’s structural characteristics—such as its
+geometry and bay layout—along with the seismic input parameters, including the
+earthquake’s peak ground acceleration (PGA) and frequency.
+
+\sphinxAtStartPar
+By learning from the synthetic dataset generated through FEA simulations, the
+CNN aims to estimate the resulting stress distribution across the building bays
+with high spatial resolution.
+This approach can potentially enable real\sphinxhyphen{}time assessment of structural vulnerability
+without the need for computationally expensive simulations.
+
+\sphinxstepscope
+
+
 \chapter{Data and Preprocessing}
 \label{\detokenize{data:data-and-preprocessing}}\label{\detokenize{data:data-section}}\label{\detokenize{data::doc}}
 
@@ -584,7 +620,7 @@ shot.
 
 \sphinxAtStartPar
 The predicting variabels are assembled from the metadata introduced in
-\DUrole{xref}{\DUrole{std}{\DUrole{std-ref}{\_metadata}}} with two minor preprocessing steps.
+{\hyperref[\detokenize{data:metadata}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{Metadata}}}}} with two minor preprocessing steps.
 
 \sphinxAtStartPar
 First, the \sphinxstylestrong{POV} feature is converted from a categorical variable to a
@@ -1104,43 +1140,9 @@ comparison between predictions and ground truth at the building level.
 \sphinxAtStartPar
 The following images show the post\sphinxhyphen{}earthquake stress distribution reconstructed
 at the building level, alongside the model prediction.
-The example refers to the same building shown in \sphinxtitleref{:ref:data\_section}.
+The example refers to the same building shown in {\hyperref[\detokenize{data:data-section}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{Data and Preprocessing}}}}}.
 
 
-
-
-\chapter{Project Overview}
-\label{\detokenize{index:project-overview}}
-\sphinxAtStartPar
-This project focuses on simulating and predicting the effects of earthquakes
-on synthetic buildings composed of bays arranged in a 3D grid of size
-\sphinxstylestrong{R × C × K}, where \sphinxstylestrong{R} is the number of floors, and \sphinxstylestrong{C} and \sphinxstylestrong{K} are the
-number of bays along the building’s width and depth, respectively.
-Each building configuration is subjected to simulated seismic events, and the
-resulting structural stress is analyzed using \sphinxstylestrong{finite element analysis (FEA)}.
-
-\sphinxAtStartPar
-This synthetic dataset is used to create a machine learning model that can
-predict post\sphinxhyphen{}earthquake stress distributions based on pre\sphinxhyphen{}earthquake geometry
-and loading.
-
-
-\section{Objective}
-\label{\detokenize{index:objective}}
-\sphinxAtStartPar
-The primary objective of this project is to develop a \sphinxstylestrong{convolutional neural network (CNN)}
-model capable of predicting the stress experienced by each bay in the building
-following an earthquake.
-The model takes as input the building’s structural characteristics—such as its
-geometry and bay layout—along with the seismic input parameters, including the
-earthquake’s peak ground acceleration (PGA) and frequency.
-
-\sphinxAtStartPar
-By learning from the synthetic dataset generated through FEA simulations, the
-CNN aims to estimate the resulting stress distribution across the building bays
-with high spatial resolution.
-This approach can potentially enable real\sphinxhyphen{}time assessment of structural vulnerability
-without the need for computationally expensive simulations.
 
 
 

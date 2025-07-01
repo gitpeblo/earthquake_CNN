@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.4)  30 JUN 2025 19:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.4)  1 JUL 2025 16:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -871,217 +871,232 @@ dvips/tex-gyre/q-ec.enc}] [2
 
 ]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 1
-02.
+LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 9
+6.
 (/usr/share/texmf/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
 ) [1
 
-{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [2]
-<01_grey_DesignPointA1000.png, id=108, 749.04843pt x 502.12593pt>
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 4
-49.
+{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [2
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+]
+Chapter 2.
+[3] [4]
+<01_grey_DesignPointA1000.png, id=128, 749.04843pt x 502.12593pt>
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 4
+85.
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 File: 01_grey_DesignPointA1000.png Graphic file (type png)
 <use 01_grey_DesignPointA1000.png>
-Package pdftex.def Info: 01_grey_DesignPointA1000.png  used on input line 449.
+Package pdftex.def Info: 01_grey_DesignPointA1000.png  used on input line 485.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-<02_edges_DesignPointA1000.png, id=109, 749.04843pt x 502.12593pt>
+<02_edges_DesignPointA1000.png, id=129, 749.04843pt x 502.12593pt>
 File: 02_edges_DesignPointA1000.png Graphic file (type png)
 <use 02_edges_DesignPointA1000.png>
-Package pdftex.def Info: 02_edges_DesignPointA1000.png  used on input line 461.
+Package pdftex.def Info: 02_edges_DesignPointA1000.png  used on input line 497.
 
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-<03_intersection_DesignPointA1000.png, id=110, 749.04843pt x 502.12593pt>
+<03_intersection_DesignPointA1000.png, id=130, 749.04843pt x 502.12593pt>
 File: 03_intersection_DesignPointA1000.png Graphic file (type png)
 <use 03_intersection_DesignPointA1000.png>
 Package pdftex.def Info: 03_intersection_DesignPointA1000.png  used on input li
-ne 473.
+ne 509.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
- [3 <./01_grey_DesignPointA1000.png (PNG copy)> <./02_edges_DesignPointA1000.pn
+ [5 <./01_grey_DesignPointA1000.png (PNG copy)> <./02_edges_DesignPointA1000.pn
 g (PNG copy)>]
-<04_template_DesignPointA1000.png, id=118, 73.02281pt x 54.2025pt>
+<04_template_DesignPointA1000.png, id=137, 73.02281pt x 54.2025pt>
 File: 04_template_DesignPointA1000.png Graphic file (type png)
 <use 04_template_DesignPointA1000.png>
-Package pdftex.def Info: 04_template_DesignPointA1000.png  used on input line 4
-84.
+Package pdftex.def Info: 04_template_DesignPointA1000.png  used on input line 5
+20.
 (pdftex.def)             Requested size: 75.28076pt x 55.88377pt.
-<05_matches_DesignPointA1000.png, id=119, 749.04843pt x 502.12593pt>
+<05_matches_DesignPointA1000.png, id=138, 749.04843pt x 502.12593pt>
 File: 05_matches_DesignPointA1000.png Graphic file (type png)
 <use 05_matches_DesignPointA1000.png>
-Package pdftex.def Info: 05_matches_DesignPointA1000.png  used on input line 49
-5.
+Package pdftex.def Info: 05_matches_DesignPointA1000.png  used on input line 53
+1.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-<06_bbox_DesignPointA1000.png, id=120, 749.04843pt x 502.12593pt>
+<06_bbox_DesignPointA1000.png, id=139, 749.04843pt x 502.12593pt>
 File: 06_bbox_DesignPointA1000.png Graphic file (type png)
 <use 06_bbox_DesignPointA1000.png>
-Package pdftex.def Info: 06_bbox_DesignPointA1000.png  used on input line 505.
+Package pdftex.def Info: 06_bbox_DesignPointA1000.png  used on input line 541.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-<07_grid_DesignPointA1000.png, id=121, 749.04843pt x 502.12593pt>
+<07_grid_DesignPointA1000.png, id=140, 749.04843pt x 502.12593pt>
 File: 07_grid_DesignPointA1000.png Graphic file (type png)
 <use 07_grid_DesignPointA1000.png>
-Package pdftex.def Info: 07_grid_DesignPointA1000.png  used on input line 519.
+Package pdftex.def Info: 07_grid_DesignPointA1000.png  used on input line 555.
 (pdftex.def)             Requested size: 301.12305pt x 201.85817pt.
-<08_shrunk_grid_DesignPointA1000.png, id=122, 810.77907pt x 609.77812pt>
+<08_shrunk_grid_DesignPointA1000.png, id=141, 810.77907pt x 609.77812pt>
 File: 08_shrunk_grid_DesignPointA1000.png Graphic file (type png)
 <use 08_shrunk_grid_DesignPointA1000.png>
 Package pdftex.def Info: 08_shrunk_grid_DesignPointA1000.png  used on input lin
-e 530.
+e 566.
 (pdftex.def)             Requested size: 301.12305pt x 226.47038pt.
-
-[4 <./03_intersection_DesignPointA1000.png (PNG copy)> <./04_template_DesignPoi
-ntA1000.png (PNG copy)>] [5 <./05_matches_DesignPointA1000.png (PNG copy)> <./0
-6_bbox_DesignPointA1000.png (PNG copy)>] [6 <./07_grid_DesignPointA1000.png (PN
-G copy)> <./08_shrunk_grid_DesignPointA1000.png (PNG copy)>]
-Overfull \hbox (3.8821pt too wide) in paragraph at lines 836--836
+ [6 <./03_intersection_DesignPointA1000.png (PNG copy)> <./04_template_DesignPo
+intA1000.png (PNG copy)>] [7 <./05_matches_DesignPointA1000.png (PNG copy)> <./
+06_bbox_DesignPointA1000.png (PNG copy)>] [8 <./07_grid_DesignPointA1000.png (P
+NG copy)> <./08_shrunk_grid_DesignPointA1000.png (PNG copy)>]
+Overfull \hbox (3.8821pt too wide) in paragraph at lines 872--872
 []\T1/qhv/m/n/10 length| 
  []
 
 
-Overfull \hbox (3.32527pt too wide) in paragraph at lines 836--836
+Overfull \hbox (3.32527pt too wide) in paragraph at lines 872--872
 []\T1/qhv/m/n/10 width| 
  []
 
 
-Overfull \hbox (3.88924pt too wide) in paragraph at lines 836--836
+Overfull \hbox (3.88924pt too wide) in paragraph at lines 872--872
 []\T1/qhv/m/n/10 height| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--836
+Underfull \hbox (badness 10000) in paragraph at lines 872--872
 []\T1/qhv/m/n/10 thick-
  []
 
 
-Overfull \hbox (4.69736pt too wide) in paragraph at lines 836--836
+Overfull \hbox (4.69736pt too wide) in paragraph at lines 872--872
 []\T1/qhv/m/n/10 POV_A| 
  []
 
 
-Overfull \hbox (4.69736pt too wide) in paragraph at lines 836--836
+Overfull \hbox (4.69736pt too wide) in paragraph at lines 872--872
 []\T1/qhv/m/n/10 POV_B| 
  []
 
 
-Overfull \hbox (4.77588pt too wide) in paragraph at lines 836--836
+Overfull \hbox (4.77588pt too wide) in paragraph at lines 872--872
 []\T1/qhv/m/n/10 POV_C| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--836
+Underfull \hbox (badness 10000) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 836--836
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 836--836
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 5.091223| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--836
+Underfull \hbox (badness 10000) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 836--836
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 836--836
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 5.091223| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--836
+Underfull \hbox (badness 10000) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 836--836
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 836--836
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 5.091223| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--836
+Underfull \hbox (badness 10000) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 836--836
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 836--836
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 4.298888| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 836--836
+Underfull \hbox (badness 10000) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 build-
  []
 
 
-Overfull \hbox (3.92636pt too wide) in paragraph at lines 836--836
+Overfull \hbox (3.92636pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 0.2458| 
  []
 
 
-Overfull \hbox (5.35413pt too wide) in paragraph at lines 836--836
+Overfull \hbox (5.35413pt too wide) in paragraph at lines 872--872
 []\T1/qtm/m/n/10 4.298888| 
  []
 
-[7] [8
+[9] [10
 
 ]
-Chapter 2.
-<graph_decoder.png, id=150, 295.3434pt x 72.9927pt>
+Chapter 3.
+<graph_decoder.png, id=172, 295.3434pt x 72.9927pt>
 File: graph_decoder.png Graphic file (type png)
 <use graph_decoder.png>
-Package pdftex.def Info: graph_decoder.png  used on input line 975.
+Package pdftex.def Info: graph_decoder.png  used on input line 1015.
 (pdftex.def)             Requested size: 469.75502pt x 116.10904pt.
-[9 <./graph_decoder.png>]
-<_static/padding_strides_transposed.png, id=159, 297.36093pt x 338.01282pt>
-File: _static/padding_strides_transposed.png Graphic file (type png)
-<use _static/padding_strides_transposed.png>
-Package pdftex.def Info: _static/padding_strides_transposed.png  used on input 
-line 996.
+[11 <./graph_decoder.png>]
+<_static/model/padding_strides_transposed.png, id=181, 297.36093pt x 338.01282p
+t>
+File: _static/model/padding_strides_transposed.png Graphic file (type png)
+<use _static/model/padding_strides_transposed.png>
+Package pdftex.def Info: _static/model/padding_strides_transposed.png  used on 
+input line 1034.
 (pdftex.def)             Requested size: 180.67383pt x 205.37259pt.
- [10 <./_static/padding_strides_transposed.png>]
-Chapter 3.
-[11
-
-] [12
+<history.png, id=183, 570.933pt x 281.853pt>
+File: history.png Graphic file (type png)
+<use history.png>
+Package pdftex.def Info: history.png  used on input line 1066.
+(pdftex.def)             Requested size: 375.80544pt x 185.52896pt.
+<early_prediction.png, id=184, 629.4717pt x 210.3057pt>
+File: early_prediction.png Graphic file (type png)
+<use early_prediction.png>
+Package pdftex.def Info: early_prediction.png  used on input line 1079.
+(pdftex.def)             Requested size: 375.80544pt x 125.55542pt.
+ [12 <./_static/model/padding_strides_transposed.png>] [13 <./history.png> <./e
+arly_prediction.png>] [14
 
 ]
 Chapter 4.
-(./earthquake_cnn.ind) [13] (./earthquake_cnn.aux)
+<predictions_bay.png, id=203, 706.13812pt x 233.37187pt>
+File: predictions_bay.png Graphic file (type png)
+<use predictions_bay.png>
+Package pdftex.def Info: predictions_bay.png  used on input line 1097.
+(pdftex.def)             Requested size: 375.80544pt x 124.19926pt.
+(./earthquake_cnn.ind) [15 <./predictions_bay.png>] (./earthquake_cnn.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `earthquake_cnn.out' has not changed.
-(rerunfilecheck)             Checksum: 460A65D249E24AA527E598B78C9AD1B2;1849.
+(rerunfilecheck)             Checksum: 6FC06923B8AD6BB2D891E55FE99D1E83;2176.
  ) 
 Here is how much of TeX's memory you used:
- 19998 strings out of 474222
- 356266 string characters out of 5748734
+ 20042 strings out of 474222
+ 357221 string characters out of 5748734
  1955975 words of memory out of 5000000
- 41818 multiletter control sequences out of 15000+600000
+ 41854 multiletter control sequences out of 15000+600000
  608682 words of font info for 75 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  72i,12n,83p,1203b,519s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1090,10 +1105,10 @@ s/type1/public/tex-gyre/qhvbi.pfb></usr/share/texmf/fonts/type1/public/tex-gyre
 /qhvr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/te
 xmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fonts/type1/public/t
 ex-gyre/qtmri.pfb>
-Output written on earthquake_cnn.pdf (17 pages, 657447 bytes).
+Output written on earthquake_cnn.pdf (19 pages, 1000637 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 175 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

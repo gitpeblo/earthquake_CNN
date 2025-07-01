@@ -25,7 +25,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
-html_static_path = ['_static']
+html_static_path = ['_static', '_static/model']
 html_title = "Earthquake CNN Documentation"
 html_logo = "_static/logo.png"   # If you want a custom logo
 html_theme_options = {
