@@ -33,7 +33,7 @@ post-earthquake stress image of a single building bay, conditioned on a vector
 of input parameters.
 
 .. figure:: _static/model/graph_decoder.png
-   :width: 80%
+   :width: 100%
    :align: center
    :alt: Model architecture
 
