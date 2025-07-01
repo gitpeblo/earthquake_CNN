@@ -53,19 +53,21 @@ The following images show the post-earthquake stress distribution reconstructed
 at the building level, alongside the model prediction.
 The example refers to the same building shown in :ref:`data_section`.
 
-.. raw:: html
+.. list-table::
+   :widths: 50 50
+   :align: center
+   :header-rows: 0
 
-    <div style="display: flex; justify-content: center; gap: 40px;">
+   * - .. figure:: _static/predictions/groundtruth_DP_A_1000.png
+         :width: 100%
+         :alt: Post-earthquake reconstructed image
 
-      <div style="text-align: center;">
-        <img src="_static/predictions/groundtruth_DP_A_1000.png" width="400px" alt="Post-earthquake reconstructed image">
-        <p><em>Post-earthquake stress for the building</em></p>
-      </div>
+         *Post-earthquake stress for the building*
 
-      <div style="text-align: center;">
-        <img src="_static/predictions/predicted_DP_A_1000.png" width="400px" alt="Predicted reconstructed image">
-        <p><em>Model prediction of post-earthquake stress</em></p>
-      </div>
+     - .. figure:: _static/predictions/predicted_DP_A_1000.png
+         :width: 100%
+         :alt: Predicted reconstructed image
 
-    </div>
+         *Model prediction of post-earthquake stress*
+
 

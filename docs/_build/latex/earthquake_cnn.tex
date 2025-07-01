@@ -171,6 +171,30 @@ Below is an example of one building’s input and its corresponding output after
 the application of the earthquake, both from the front view:
 
 
+\begin{savenotes}\sphinxattablestart
+\sphinxthistablewithglobalstyle
+\centering
+\begin{tabular}[t]{\X{50}{100}\X{50}{100}}
+\sphinxtoprule
+\sphinxtableatstartofbodyhook
+
+\begin{sphinxfigure-in-table}
+\centering
+\capstart
+\noindent\sphinxincludegraphics[width=1.000\linewidth]{{example_input_DesignPointA1000}.png}
+\sphinxfigcaption{\sphinxstyleemphasis{Input (pre\sphinxhyphen{}earthquake geometry)}}\label{\detokenize{data:id2}}\end{sphinxfigure-in-table}\relax
+&
+
+\begin{sphinxfigure-in-table}
+\centering
+\capstart
+\noindent\sphinxincludegraphics[width=1.000\linewidth]{{example_output_DesignPointA1000}.png}
+\sphinxfigcaption{\sphinxstyleemphasis{Output (post\sphinxhyphen{}earthquake stress)}}\label{\detokenize{data:id3}}\end{sphinxfigure-in-table}\relax
+\\
+\sphinxbottomrule
+\end{tabular}
+\sphinxtableafterendhook\par
+\sphinxattableend\end{savenotes}
 
 \sphinxAtStartPar
 Note that our analysis focuses only on a \sphinxstylestrong{subset} of the total bays within each
@@ -484,7 +508,7 @@ This ensures that the analysis focuses exclusively on the meaningful geometry.
 
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{01_grey_DesignPointA1000}.png}
 \caption{Step 1 — Filter out non\sphinxhyphen{}structural pixels and crop to the relevant building
-region.}\label{\detokenize{data:id2}}\end{figure}
+region.}\label{\detokenize{data:id4}}\end{figure}
 
 \sphinxAtStartPar
 Next, we detect the underlying bay grid by identifying the most prominent
@@ -495,7 +519,7 @@ vertical and horizontal edges.
 \capstart
 
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{02_edges_DesignPointA1000}.png}
-\caption{Step 2 — Detect bay grid layout using edge detection.}\label{\detokenize{data:id3}}\end{figure}
+\caption{Step 2 — Detect bay grid layout using edge detection.}\label{\detokenize{data:id5}}\end{figure}
 
 \sphinxAtStartPar
 The next steps involve extracting a template from the top\sphinxhyphen{}left cell of the
@@ -507,7 +531,7 @@ First, we identify the upper\sphinxhyphen{}left intersection points of the detec
 \capstart
 
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{03_intersection_DesignPointA1000}.png}
-\caption{Step 3 — Identify the upper\sphinxhyphen{}left intersection points between the detected grid edges.}\label{\detokenize{data:id4}}\end{figure}
+\caption{Step 3 — Identify the upper\sphinxhyphen{}left intersection points between the detected grid edges.}\label{\detokenize{data:id6}}\end{figure}
 
 \sphinxAtStartPar
 Next, a template is extracted from the top\sphinxhyphen{}left bay, using the previously
@@ -518,7 +542,7 @@ identified intersection points.
 \capstart
 
 \noindent\sphinxincludegraphics[width=100\sphinxpxdimen]{{04_template_DesignPointA1000}.png}
-\caption{Step 4 — Extract a template bay region from the top\sphinxhyphen{}left corner of the grid.}\label{\detokenize{data:id5}}\end{figure}
+\caption{Step 4 — Extract a template bay region from the top\sphinxhyphen{}left corner of the grid.}\label{\detokenize{data:id7}}\end{figure}
 
 \sphinxAtStartPar
 Template matching is then used to locate all other bay regions that resemble
@@ -529,7 +553,7 @@ the extracted template.
 \capstart
 
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{05_matches_DesignPointA1000}.png}
-\caption{Step 5 — Detect all bay regions by matching the template across the image.}\label{\detokenize{data:id6}}\end{figure}
+\caption{Step 5 — Detect all bay regions by matching the template across the image.}\label{\detokenize{data:id8}}\end{figure}
 
 \sphinxAtStartPar
 From the matched grid, we compute a bounding box that encloses the full bay layout.
@@ -539,7 +563,7 @@ From the matched grid, we compute a bounding box that encloses the full bay layo
 \capstart
 
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{06_bbox_DesignPointA1000}.png}
-\caption{Step 6 — Draw a bounding box.}\label{\detokenize{data:id7}}\end{figure}
+\caption{Step 6 — Draw a bounding box.}\label{\detokenize{data:id9}}\end{figure}
 
 \sphinxAtStartPar
 We then draw a structured grid of rectangles, each with dimentions equal to
@@ -553,7 +577,7 @@ the bays may not be perfectly aligned or may vary slightly in size.
 \capstart
 
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{07_grid_DesignPointA1000}.png}
-\caption{Step 7 — Draw a uniform grid.}\label{\detokenize{data:id8}}\end{figure}
+\caption{Step 7 — Draw a uniform grid.}\label{\detokenize{data:id10}}\end{figure}
 
 \sphinxAtStartPar
 To capture the actual content of the bays, and avoid the grid lines and ticks,
@@ -564,7 +588,7 @@ we first  slightly shrunk the grid cells.
 \capstart
 
 \noindent\sphinxincludegraphics[width=400\sphinxpxdimen]{{08_shrunk_grid_DesignPointA1000}.png}
-\caption{Step 8 — Shrink all the cells.}\label{\detokenize{data:id9}}\end{figure}
+\caption{Step 8 — Shrink all the cells.}\label{\detokenize{data:id11}}\end{figure}
 
 \sphinxAtStartPar
 \textendash{}
@@ -1143,6 +1167,30 @@ at the building level, alongside the model prediction.
 The example refers to the same building shown in {\hyperref[\detokenize{data:data-section}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{Data and Preprocessing}}}}}.
 
 
+\begin{savenotes}\sphinxattablestart
+\sphinxthistablewithglobalstyle
+\centering
+\begin{tabular}[t]{\X{50}{100}\X{50}{100}}
+\sphinxtoprule
+\sphinxtableatstartofbodyhook
+
+\begin{sphinxfigure-in-table}
+\centering
+\capstart
+\noindent\sphinxincludegraphics[width=1.000\linewidth]{{groundtruth_DP_A_1000}.png}
+\sphinxfigcaption{\sphinxstyleemphasis{Post\sphinxhyphen{}earthquake stress for the building}}\label{\detokenize{predictions:id2}}\end{sphinxfigure-in-table}\relax
+&
+
+\begin{sphinxfigure-in-table}
+\centering
+\capstart
+\noindent\sphinxincludegraphics[width=1.000\linewidth]{{predicted_DP_A_1000}.png}
+\sphinxfigcaption{\sphinxstyleemphasis{Model prediction of post\sphinxhyphen{}earthquake stress}}\label{\detokenize{predictions:id3}}\end{sphinxfigure-in-table}\relax
+\\
+\sphinxbottomrule
+\end{tabular}
+\sphinxtableafterendhook\par
+\sphinxattableend\end{savenotes}
 
 
 

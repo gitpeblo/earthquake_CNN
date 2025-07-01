@@ -29,21 +29,22 @@ Example pre-/post-Earthquake
 Below is an example of one building’s input and its corresponding output after
 the application of the earthquake, both from the front view:
 
-.. raw:: html
+.. list-table::
+   :widths: 50 50
+   :align: center
+   :header-rows: 0
 
-    <div style="display: flex; justify-content: center; gap: 40px;">
+   * - .. figure:: _static/data/example_input_DesignPointA1000.png
+         :width: 100%
+         :alt: Input image
 
-      <div style="text-align: center;">
-        <img src="_static/data/example_input_DesignPointA1000.png" width="400px" alt="Input image">
-        <p><em>Input (pre-earthquake geometry)</em></p>
-      </div>
+         *Input (pre-earthquake geometry)*
 
-      <div style="text-align: center;">
-        <img src="_static/data/example_output_DesignPointA1000.png" width="400px" alt="Output image">
-        <p><em>Output (post-earthquake stress)</em></p>
-      </div>
+     - .. figure:: _static/data/example_output_DesignPointA1000.png
+         :width: 100%
+         :alt: Output image
 
-    </div>
+         *Output (post-earthquake stress)*
 
 Note that our analysis focuses only on a **subset** of the total bays within each
 building (in the examples above, the third column of bays).
