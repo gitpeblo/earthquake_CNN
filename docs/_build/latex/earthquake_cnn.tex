@@ -614,39 +614,40 @@ training dataset.
 For the post\sphinxhyphen{}earthquake image example shown at the top, the cropped bays of
 interest extracted from the bottom row appear as shown below:
 
-\begin{sphinxuseclass}{centered-images}
 
 \begin{savenotes}\sphinxattablestart
 \sphinxthistablewithglobalstyle
 \centering
-\begin{tabular}[t]{\X{40}{80}\X{40}{80}}
+\begin{tabular}[t]{\X{50}{100}\X{50}{100}}
 \sphinxtoprule
 \sphinxtableatstartofbodyhook
+\begin{sphinxuseclass}{image-container}
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=0.700\linewidth]{{03_resized_R9_C10_r0_c4}.png}
+\noindent\sphinxincludegraphics[width=0.600\linewidth]{{03_resized_R9_C10_r0_c4}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Extraction of the bottom\sphinxhyphen{}left bay}}\label{\detokenize{data:id12}}\end{sphinxfigure-in-table}\relax
-&
+
+\end{sphinxuseclass}&
+\begin{sphinxuseclass}{image-container}
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=0.700\linewidth]{{03_resized_R9_C10_r0_c5}.png}
+\noindent\sphinxincludegraphics[width=0.600\linewidth]{{03_resized_R9_C10_r0_c5}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Extraction of the bottom\sphinxhyphen{}right bay}}\label{\detokenize{data:id13}}\end{sphinxfigure-in-table}\relax
-\\
+
+\end{sphinxuseclass}\\
 \sphinxbottomrule
 \end{tabular}
 \sphinxtableafterendhook\par
 \sphinxattableend\end{savenotes}
 
-\end{sphinxuseclass}
 \sphinxAtStartPar
 To reduce high\sphinxhyphen{}frequency noise such as the grey pixels and the artifact segments
 visible in the images above, a Gaussian blur is applied.
 
-\begin{sphinxuseclass}{centered-images}
 
 \begin{savenotes}\sphinxattablestart
 \sphinxthistablewithglobalstyle
@@ -654,31 +655,33 @@ visible in the images above, a Gaussian blur is applied.
 \begin{tabular}[t]{\X{50}{100}\X{50}{100}}
 \sphinxtoprule
 \sphinxtableatstartofbodyhook
+\begin{sphinxuseclass}{image-container}
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=0.700\linewidth]{{04_smooth_R9_C10_r0_c4}.png}
+\noindent\sphinxincludegraphics[width=0.600\linewidth]{{04_smooth_R9_C10_r0_c4}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Smoothed bottom\sphinxhyphen{}left extraction}}\label{\detokenize{data:id14}}\end{sphinxfigure-in-table}\relax
-&
+
+\end{sphinxuseclass}&
+\begin{sphinxuseclass}{image-container}
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=0.700\linewidth]{{04_smooth_R9_C10_r0_c5}.png}
+\noindent\sphinxincludegraphics[width=0.600\linewidth]{{04_smooth_R9_C10_r0_c5}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Smoothed bottom\sphinxhyphen{}right extraction}}\label{\detokenize{data:id15}}\end{sphinxfigure-in-table}\relax
-\\
+
+\end{sphinxuseclass}\\
 \sphinxbottomrule
 \end{tabular}
 \sphinxtableafterendhook\par
 \sphinxattableend\end{savenotes}
 
-\end{sphinxuseclass}
 \sphinxAtStartPar
 This is ultimately followed by a median filtering aimed at restoring structural
 detail.
 
-\begin{sphinxuseclass}{centered-images}
 
 \begin{savenotes}\sphinxattablestart
 \sphinxthistablewithglobalstyle
@@ -686,26 +689,29 @@ detail.
 \begin{tabular}[t]{\X{50}{100}\X{50}{100}}
 \sphinxtoprule
 \sphinxtableatstartofbodyhook
+\begin{sphinxuseclass}{image-container}
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=0.700\linewidth]{{05_median_R9_C10_r0_c4}.png}
+\noindent\sphinxincludegraphics[width=0.600\linewidth]{{05_median_R9_C10_r0_c4}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Filtered bottom\sphinxhyphen{}left extraction}}\label{\detokenize{data:id16}}\end{sphinxfigure-in-table}\relax
-&
+
+\end{sphinxuseclass}&
+\begin{sphinxuseclass}{image-container}
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=0.700\linewidth]{{05_median_R9_C10_r0_c5}.png}
+\noindent\sphinxincludegraphics[width=0.600\linewidth]{{05_median_R9_C10_r0_c5}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Filtered bottom\sphinxhyphen{}right extraction}}\label{\detokenize{data:id17}}\end{sphinxfigure-in-table}\relax
-\\
+
+\end{sphinxuseclass}\\
 \sphinxbottomrule
 \end{tabular}
 \sphinxtableafterendhook\par
 \sphinxattableend\end{savenotes}
 
-\end{sphinxuseclass}
 \sphinxAtStartPar
 Finally, the dark bays—not used in the analysis (such as the first and last 4
 columns in the pre\sphinxhyphen{}earthquake image example above)—are excluded from the dataset.

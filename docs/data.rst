@@ -254,22 +254,23 @@ training dataset.
 For the post-earthquake image example shown at the top, the cropped bays of
 interest extracted from the bottom row appear as shown below:
 
-.. container:: centered-images
+.. list-table::
+   :widths: 50 50
+   :align: center
+   :header-rows: 0
 
-   .. list-table::
-      :widths: 40 40
-      :align: center
-      :class: align-center
-      :header-rows: 0
+   * - .. container:: image-container
 
-      * - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c4.png
-            :width: 70%
+         .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c4.png
+            :width: 60%
             :alt: Extraction of the bottom-left bay
 
             *Extraction of the bottom-left bay*
 
-        - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c5.png
-            :width: 70%
+     - .. container:: image-container
+
+         .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c5.png
+            :width: 60%
             :alt: Extraction of the bottom-right bay
 
             *Extraction of the bottom-right bay*
@@ -277,22 +278,23 @@ interest extracted from the bottom row appear as shown below:
 To reduce high-frequency noise such as the grey pixels and the artifact segments
 visible in the images above, a Gaussian blur is applied.
 
-.. container:: centered-images
+.. list-table::
+   :widths: 50 50
+   :align: center
+   :header-rows: 0
 
-   .. list-table::
-      :widths: 50 50
-      :align: center
-      :class: align-center
-      :header-rows: 0
+   * - .. container:: image-container
 
-      * - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c4.png
-            :width: 70%
+         .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c4.png
+            :width: 60%
             :alt: Smoothed bottom-left extraction
 
             *Smoothed bottom-left extraction*
 
-        - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c5.png
-            :width: 70%
+     - .. container:: image-container
+
+         .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c5.png
+            :width: 60%
             :alt: Smoothed bottom-right extraction
 
             *Smoothed bottom-right extraction*
@@ -300,22 +302,23 @@ visible in the images above, a Gaussian blur is applied.
 This is ultimately followed by a median filtering aimed at restoring structural
 detail.
 
-.. container:: centered-images
+.. list-table::
+   :widths: 50 50
+   :align: center
+   :header-rows: 0
 
-   .. list-table::
-      :widths: 50 50
-      :align: center
-      :class: align-center
-      :header-rows: 0
+   * - .. container:: image-container
 
-      * - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c4.png
-            :width: 70%
+         .. figure:: _static/preprocessing/05_median_R9_C10_r0_c4.png
+            :width: 60%
             :alt: Filtered bottom-left extraction
 
             *Filtered bottom-left extraction*
 
-        - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c5.png
-            :width: 70%
+     - .. container:: image-container
+
+         .. figure:: _static/preprocessing/05_median_R9_C10_r0_c5.png
+            :width: 60%
             :alt: Filtered bottom-right extraction
 
             *Filtered bottom-right extraction*
