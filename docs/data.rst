@@ -263,13 +263,13 @@ interest extracted from the bottom row appear as shown below:
       :header-rows: 0
 
       * - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c4.png
-            :width: 100px
+            :width: 60%
             :alt: Extraction of the bottom-left bay
 
             *Extraction of the bottom-left bay*
 
         - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c5.png
-            :width: 100px
+            :width: 60%
             :alt: Extraction of the bottom-right bay
 
             *Extraction of the bottom-right bay*
@@ -286,13 +286,13 @@ visible in the images above, a Gaussian blur is applied.
       :header-rows: 0
 
       * - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c4.png
-            :width: 100px
+            :width: 60%
             :alt: Smoothed bottom-left extraction
 
             *Smoothed bottom-left extraction*
 
         - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c5.png
-            :width: 100px
+            :width: 60%
             :alt: Smoothed bottom-right extraction
 
             *Smoothed bottom-right extraction*
@@ -309,13 +309,13 @@ detail.
       :header-rows: 0
 
       * - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c4.png
-            :width: 100px
+            :width: 60%
             :alt: Filtered bottom-left extraction
 
             *Filtered bottom-left extraction*
 
         - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c5.png
-            :width: 100px
+            :width: 60%
             :alt: Filtered bottom-right extraction
 
             *Filtered bottom-right extraction*
