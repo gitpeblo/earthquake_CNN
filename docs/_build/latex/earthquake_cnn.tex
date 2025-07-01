@@ -502,7 +502,7 @@ structural content by filtering out background pixels and cropping to the
 bounding region of the building.
 This ensures that the analysis focuses exclusively on the meaningful geometry.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -514,7 +514,7 @@ region.}\label{\detokenize{data:id4}}\end{figure}
 Next, we detect the underlying bay grid by identifying the most prominent
 vertical and horizontal edges.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -526,7 +526,7 @@ The next steps involve extracting a template from the top\sphinxhyphen{}left cel
 grid, which serves as a reference for the bay structure.
 First, we identify the upper\sphinxhyphen{}left intersection points of the detected grid edges.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -537,7 +537,7 @@ First, we identify the upper\sphinxhyphen{}left intersection points of the detec
 Next, a template is extracted from the top\sphinxhyphen{}left bay, using the previously
 identified intersection points.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -548,7 +548,7 @@ identified intersection points.
 Template matching is then used to locate all other bay regions that resemble
 the extracted template.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -558,7 +558,7 @@ the extracted template.
 \sphinxAtStartPar
 From the matched grid, we compute a bounding box that encloses the full bay layout.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -572,7 +572,7 @@ This ensures a consistent segmentation into cells of equal size.
 Hower, the cell grid is only an approximation of the actual bay layout, since
 the bays may not be perfectly aligned or may vary slightly in size.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -583,7 +583,7 @@ the bays may not be perfectly aligned or may vary slightly in size.
 To capture the actual content of the bays, and avoid the grid lines and ticks,
 we first  slightly shrunk the grid cells.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -614,25 +614,26 @@ training dataset.
 For the post\sphinxhyphen{}earthquake image example shown at the top, the cropped bays of
 interest extracted from the bottom row appear as shown below:
 
+\begin{sphinxuseclass}{centered-images}
 
 \begin{savenotes}\sphinxattablestart
 \sphinxthistablewithglobalstyle
 \centering
-\begin{tabular}[t]{\X{50}{100}\X{50}{100}}
+\begin{tabular}[t]{\X{40}{80}\X{40}{80}}
 \sphinxtoprule
 \sphinxtableatstartofbodyhook
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=1.000\linewidth]{{03_resized_R9_C10_r0_c4}.png}
+\noindent\sphinxincludegraphics[width=0.700\linewidth]{{03_resized_R9_C10_r0_c4}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Extraction of the bottom\sphinxhyphen{}left bay}}\label{\detokenize{data:id12}}\end{sphinxfigure-in-table}\relax
 &
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=1.000\linewidth]{{03_resized_R9_C10_r0_c5}.png}
+\noindent\sphinxincludegraphics[width=0.700\linewidth]{{03_resized_R9_C10_r0_c5}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Extraction of the bottom\sphinxhyphen{}right bay}}\label{\detokenize{data:id13}}\end{sphinxfigure-in-table}\relax
 \\
 \sphinxbottomrule
@@ -640,10 +641,12 @@ interest extracted from the bottom row appear as shown below:
 \sphinxtableafterendhook\par
 \sphinxattableend\end{savenotes}
 
+\end{sphinxuseclass}
 \sphinxAtStartPar
 To reduce high\sphinxhyphen{}frequency noise such as the grey pixels and the artifact segments
 visible in the images above, a Gaussian blur is applied.
 
+\begin{sphinxuseclass}{centered-images}
 
 \begin{savenotes}\sphinxattablestart
 \sphinxthistablewithglobalstyle
@@ -655,14 +658,14 @@ visible in the images above, a Gaussian blur is applied.
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=1.000\linewidth]{{04_smooth_R9_C10_r0_c4}.png}
+\noindent\sphinxincludegraphics[width=0.700\linewidth]{{04_smooth_R9_C10_r0_c4}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Smoothed bottom\sphinxhyphen{}left extraction}}\label{\detokenize{data:id14}}\end{sphinxfigure-in-table}\relax
 &
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=1.000\linewidth]{{04_smooth_R9_C10_r0_c5}.png}
+\noindent\sphinxincludegraphics[width=0.700\linewidth]{{04_smooth_R9_C10_r0_c5}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Smoothed bottom\sphinxhyphen{}right extraction}}\label{\detokenize{data:id15}}\end{sphinxfigure-in-table}\relax
 \\
 \sphinxbottomrule
@@ -670,10 +673,12 @@ visible in the images above, a Gaussian blur is applied.
 \sphinxtableafterendhook\par
 \sphinxattableend\end{savenotes}
 
+\end{sphinxuseclass}
 \sphinxAtStartPar
 This is ultimately followed by a median filtering aimed at restoring structural
 detail.
 
+\begin{sphinxuseclass}{centered-images}
 
 \begin{savenotes}\sphinxattablestart
 \sphinxthistablewithglobalstyle
@@ -685,14 +690,14 @@ detail.
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=1.000\linewidth]{{05_median_R9_C10_r0_c4}.png}
+\noindent\sphinxincludegraphics[width=0.700\linewidth]{{05_median_R9_C10_r0_c4}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Filtered bottom\sphinxhyphen{}left extraction}}\label{\detokenize{data:id16}}\end{sphinxfigure-in-table}\relax
 &
 
 \begin{sphinxfigure-in-table}
 \centering
 \capstart
-\noindent\sphinxincludegraphics[width=1.000\linewidth]{{05_median_R9_C10_r0_c5}.png}
+\noindent\sphinxincludegraphics[width=0.700\linewidth]{{05_median_R9_C10_r0_c5}.png}
 \sphinxfigcaption{\sphinxstyleemphasis{Filtered bottom\sphinxhyphen{}right extraction}}\label{\detokenize{data:id17}}\end{sphinxfigure-in-table}\relax
 \\
 \sphinxbottomrule
@@ -700,6 +705,7 @@ detail.
 \sphinxtableafterendhook\par
 \sphinxattableend\end{savenotes}
 
+\end{sphinxuseclass}
 \sphinxAtStartPar
 Finally, the dark bays—not used in the analysis (such as the first and last 4
 columns in the pre\sphinxhyphen{}earthquake image example above)—are excluded from the dataset.
@@ -1104,7 +1110,7 @@ Our predictive model is a \sphinxstylestrong{convolutional decoder} that generat
 post\sphinxhyphen{}earthquake stress image of a single building bay, conditioned on a vector
 of input parameters.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -1123,7 +1129,7 @@ into a 2D feature map
 2. A stack of \sphinxstylestrong{transposed convolutional layers} (a.k.a. “upsampling layers”)
 upsamples this feature map to the desired image resolution
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -1155,7 +1161,7 @@ Early stopping based on validation loss is applied to retain the best model chec
 Training uses the Adam optimizer with a relatively low learning rate of 0.005
 and a large batch size of 256.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -1168,7 +1174,7 @@ Because the viewpoint (POV) is included in the conditioning vector, the model
 can directly learn to reproduce diverse stress patterns specific to each
 perspective.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
@@ -1186,7 +1192,7 @@ The model achieves a Mean Squared Error (MSE) of approximately 0.017 on the
 test set, corresponding to a Root Mean Squared Error (RMSE) of about 13.0\%
 relative to the normalized image intensity range {[}0, 1{]}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \capstart
 
