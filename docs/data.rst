@@ -310,13 +310,13 @@ oise while preserving important structural details.
       :header-rows: 0
 
       * - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c4.png
-            :width: 60%
+            :width: 68%
             :alt: Filtered bottom-left extraction
 
             *Filtered bottom-left extraction*
 
         - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c5.png
-            :width: 60%
+            :width: 68%
             :alt: Filtered bottom-right extraction
 
             *Filtered bottom-right extraction*
