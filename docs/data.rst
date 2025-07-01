@@ -254,59 +254,62 @@ training dataset.
 For the post-earthquake image example shown at the top, the cropped bays of
 interest extracted from the bottom row appear as shown below:
 
-.. raw:: html
+.. list-table::
+   :widths: 50 50
+   :align: center
+   :header-rows: 0
 
-    <div style="display: flex; justify-content: center; gap: 40px;">
+   * - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c4.png
+         :width: 100%
+         :alt: Extraction of the bottom-left bay
 
-      <div style="text-align: center;">
-        <img src="_static/preprocessing/03_resized_R9_C10_r0_c4.png" width="200px" alt="Extraction of the bottom-left bay">
-        <p><em>Extraction of the bottom-left bay</em></p>
-      </div>
+         *Extraction of the bottom-left bay*
 
-      <div style="text-align: center;">
-        <img src="_static/preprocessing/03_resized_R9_C10_r0_c5.png" width="200px" alt="Extraction of the bottom-right bay">
-        <p><em>Extraction of the bottom-right bay</em></p>
-      </div>
+     - .. figure:: _static/preprocessing/03_resized_R9_C10_r0_c5.png
+         :width: 100%
+         :alt: Extraction of the bottom-right bay
 
-    </div>
+         *Extraction of the bottom-right bay*
 
 To reduce high-frequency noise such as the grey pixels and the artifact segments
 visible in the images above, a Gaussian blur is applied.
 
-.. raw:: html
+.. list-table::
+   :widths: 50 50
+   :align: center
+   :header-rows: 0
 
-    <div style="display: flex; justify-content: center; gap: 40px;">
+   * - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c4.png
+         :width: 100%
+         :alt: Smoothed bottom-left extraction
 
-      <div style="text-align: center;">
-        <img src="_static/preprocessing/04_smooth_R9_C10_r0_c4.png" width="200px" alt="Smoothed bottom-left extraction">
-        <p><em>Smoothed bottom-left extraction</em></p>
-      </div>
+         *Smoothed bottom-left extraction*
 
-      <div style="text-align: center;">
-        <img src="_static/preprocessing/04_smooth_R9_C10_r0_c5.png" width="200px" alt="Smoothed bottom-right extraction">
-        <p><em>Smoothed bottom-right extraction</em></p>
-      </div>
+     - .. figure:: _static/preprocessing/04_smooth_R9_C10_r0_c5.png
+         :width: 100%
+         :alt: Smoothed bottom-right extraction
 
-    </div>
+         *Smoothed bottom-right extraction*
 
 This is ultimately followed by a median filtering aimed at restoring structural
 detail.
 
-.. raw:: html
+.. list-table::
+   :widths: 50 50
+   :align: center
+   :header-rows: 0
 
-    <div style="display: flex; justify-content: center; gap: 40px;">
+   * - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c4.png
+         :width: 100%
+         :alt: Filtered bottom-left extraction
 
-      <div style="text-align: center;">
-        <img src="_static/preprocessing/05_median_R9_C10_r0_c4.png" width="200px" alt="Filtered bottom-left extraction">
-        <p><em>Filtered bottom-left extraction</em></p>
-      </div>
+         *Filtered bottom-left extraction*
 
-      <div style="text-align: center;">
-        <img src="_static/preprocessing/05_median_R9_C10_r0_c5.png" width="200px" alt="Filtered bottom-right extraction">
-        <p><em>Filtered bottom-right extraction</em></p>
-      </div>
+     - .. figure:: _static/preprocessing/05_median_R9_C10_r0_c5.png
+         :width: 100%
+         :alt: Filtered bottom-right extraction
 
-    </div>
+         *Filtered bottom-right extraction*
 
 
 Finally, the dark bays—not used in the analysis (such as the first and last 4
